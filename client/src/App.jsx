@@ -2,10 +2,17 @@ import React, { useState, useEffect } from 'react';
 import './index.css'
 import Testimonials from './components/Testimonials';
 const App = () => {
-  const img1 ='https://t3.ftcdn.net/jpg/04/63/74/54/360_F_463745476_fQ6EKEfofPQoXmv49AMNXcRUPsVVV3LL.jpg';
-  const img2=  "https://oldnavyprod.a.bigcontent.io/v1/static/240501_25-M1203_B_DP_NewArrivals_0501"
-  const img3 = "https://www.electrolux.in/globalassets/blog/how-to-get-white-clothes-white-again/how-to-get-white-clothes-white-again-banner.jpg"
-  const img4 = "https://t3.ftcdn.net/jpg/02/10/85/26/240_F_210852662_KWN4O1tjxIQt8axc2r82afdSwRSLVy7g.jpg"
+  const img1 ='https://t3.ftcdn.net/jpg/03/06/16/34/360_F_306163481_4FvDVQ5QDWgKHp4NfSjFrkZ10EFu1dAw.jpg';
+  const img2=  "https://www.shutterstock.com/image-photo/trendy-short-haired-african-american-600nw-2316272763.jpg"
+  const img3 = "https://t3.ftcdn.net/jpg/03/06/16/34/360_F_306163481_4FvDVQ5QDWgKHp4NfSjFrkZ10EFu1dAw.jpg"
+  const img4 = "https://www.shutterstock.com/image-vector/black-friday-super-sale-realistic-260nw-1523725004.jpg"
+ 
+
+  const im1 ='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMkKFi9Hoei0uAG-UEvnowTeKkeDT38czzKg&s';
+  const im2=  "https://i.pinimg.com/736x/f9/77/a2/f977a2f73b5b2df72ff900ab505834ee.jpg"
+  const im3 = "https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/57/587884/1.jpg?2392"
+  const im4 = "https://s.alicdn.com/@sc04/kf/H1d60d853aa564b1b879c42ade3d1edbf8.jpg_300x300.jpg"
+  const im5 = "https://i.ebayimg.com/images/g/CdwAAOSwxaNlacX7/s-l1200.jpg"
   
   const disc1 ='https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/57/587884/1.jpg?2392';
   const disc2=  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROZK23rCFnqYwCsWV7zzBAac5YFKSR-J9CGg&s"
@@ -14,8 +21,11 @@ const App = () => {
   
 
   const menshoe = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMkKFi9Hoei0uAG-UEvnowTeKkeDT38czzKg&s"
-  const Womenshoe = "https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/32/103875/1.jpg?7301"
-  const kids = "https://nypost.com/wp-content/uploads/sites/2/2023/07/bestkidssneakers.jpg?quality=75&strip=all"
+  const womenshoe = "https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/32/103875/1.jpg?7301"
+  const kids = "https://images.fashiontiy.com/products/T1035EF029/main_7.jpg"
+  const boots = "https://s.alicdn.com/@sc04/kf/H1d60d853aa564b1b879c42ade3d1edbf8.jpg_300x300.jpg"
+  const crocs = "https://ae01.alicdn.com/kf/S2d5727488ed24aff8fd23bcf9dfd8a63U/2023-Summer-Slippers-Men-Women-High-Soft-Bottom-Sandals-Trend-Slides-Light-Beach-Shoes-Men-s.jpg"
+  const flats = "https://m.media-amazon.com/images/I/31Prz1nqtwL._AC_.jpg"
   
   const womenwear = "https://media.istockphoto.com/id/155596905/photo/high-class-female-clothing.jpg?s=612x612&w=0&k=20&c=V1HcqglhOc76MHidrmyPjraiMNXwhAzO-wMHbEMMEqM="
   const menwear = "https://m.media-amazon.com/images/I/51dnIvQ8L1L._AC_UF350,350_QL80_.jpg"
@@ -56,14 +66,21 @@ const App = () => {
     const menofficial = "https://png.pngtree.com/png-vector/20240616/ourmid/pngtree-success-matches-perfectly-with-a-stylish-suit-png-image_12727721.png"
     const womenofficial = "https://t4.ftcdn.net/jpg/00/29/59/47/360_F_29594789_gruUqSPmfKUchKUkWumMYE1bXdfxN6Kt.jpg"
   
-  const items = [
+  const banners = [
     { id: 1, name: 'items1', img: img1, price: 2 },
     { id: 2, name: 'items2', img: img2, price: 12  },
     { id: 3, name: 'items3', img: img3 , price: 32 },
     { id: 4, name: 'items4', img: img4, price: 12  },
-    { id: 5, name: 'items5', img: img4, price: 10  },
-    { id: 6, name: 'items4', img: img4, price: 15  },
-    { id: 7, name: 'items4', img: img4, price: 11  },
+    
+  ];
+  const recommended = [
+    { id: 1, name: 'items1', img: im1, price: 2 },
+    { id: 2, name: 'items2', img: im2, price: 12  },
+    { id: 3, name: 'items3', img: im3 , price: 32 },
+    { id: 4, name: 'items4', img: im5, price: 12  },
+    { id: 5, name: 'items5', img: im4, price: 10  },
+    { id: 6, name: 'items4', img: im1, price: 15  },
+    { id: 7, name: 'items4', img: im4, price: 11  },
   ];
 
   const discounted = [
@@ -82,7 +99,9 @@ const App = () => {
     { id: 4, name: 'items4', img: gucci, price: 12  },
     { id: 5, name: 'items5', img: nike, price: 10  },
     { id: 6, name: 'items4', img: disc2, price: 15  },
-    { id: 7, name: 'items4', img: disc1, price: 11  },
+    { id: 7, name: 'items4', img: disc1, price: 11 },
+    { id: 8, name: 'items2', img: adiddas, price: 102 },
+    { id: 9, name: 'items2', img: adiddas, price: 112  },
   ];
   const newArrivals = [
     { id: 1, name: 'items1', img: arrival1, price: 2 },
@@ -103,7 +122,11 @@ const App = () => {
   const pantie="https://media1.calvinklein.com/images/20230919/PLP/PLP_Boxer_Briefs_2x.jpg"
   const socks="https://riogiftshop.com/wp-content/uploads/2023/06/Formal-Cotton-Socks-in-Kenya-7.jpg"
   const cape = "https://files.sophie.co.ke/2023/04/1604336905_3586-1_2073.jpg"
-  
+  const durags = "https://afrosentail.co.nz/wp-content/uploads/2020/08/Durag-Black.jpeg"
+  const robes = "https://beidle.co/cdn/shop/products/IDLESS237519.jpg?v=1672979901&width=1080"
+  const towels = "https://homeandbeyond.co.ke/cdn/shop/products/Luxury-Towels-Luxury-Towels-1665129577.jpg?v=1665129579"
+  const stockings = "https://i5.walmartimages.com/asr/bfe49d2a-b9f2-4859-a4a5-a750ac5f08a3.050c96c7ca8fe1a0e9e57fe7904d1ada.jpeg"
+
   const [currentIndex, setCurrentIndex] = useState(0);
   const [fade, setFade] = useState(true);
 
@@ -114,45 +137,48 @@ const App = () => {
       setTimeout(() => {
         // After the fade-out completes, change the image
         setCurrentIndex((prevIndex) =>
-          prevIndex === items.length - 1 ? 0 : prevIndex + 1
+          prevIndex === banners.length - 1 ? 0 : prevIndex + 1
         );
         setFade(true); // Start fade-in
       }, 300); // 500ms matches the fade-out duration
     }, 4000);
 
     return () => clearInterval(interval);
-  }, [items.length]);
+  }, [banners.length]);
 
   return (
-    <div className="text-white mt-2 ">
-      <div className='bg-slate-900 h-5'>
+    <> <div className='text-center p-2'>
+        <h1 className='text-yellow-200 font-extralight text-lg sm:text-2xl'>Timeless Trends</h1>
+        <hr className='my-1 border-t-[0.01px] border-yellow-100 ' />
 
       </div>
-    <div className="flex  justify-center w-full h-[250px]">
+    <div className="text-white mt-2 lg:w-[85%]   mx-auto">
+     
+    <div className="flex  justify-center w-full h-[100px] sm:h-[230px]">
       {/* Display the current image with fade effect */}
       <div
-        key={items[currentIndex].id}
+        key={banners[currentIndex].id}
         className={`transition-opacity w-full h-full duration-500 ease-in-out ${
           fade ? 'opacity-100' : 'opacity-0'
         }`}
       >
         <img
-          src={items[currentIndex].img}
-          alt={items[currentIndex].name}
+          src={banners[currentIndex].img}
+          alt={banners[currentIndex].name}
           className="w-full h-full object-cover"
         />
         
       </div>
       </div>
       <div
-         className='w-full p-1 mt-4 bg-slate-800 flex justify-between'
-        > <h1 className='ml-2 text-yellow-500'>Recommended For You</h1>
+         className='w-full p-1 mt-4 sm:mt-[70px]  flex justify-between'
+        > <h1 className='w-[50%] sm:w-[30%] text-yellow-200 bg-black p-1 px-3 text-xs sm:text-[14px] rounded-md rounded-tr-full shadow-white shadow-sm'>Reccomended for you</h1>
         </div>
       
 
-      <div className='flex w-full  mt-1  '>
-  <div className='flex mx-auto gap-2 lg:gap-6 overflow-x-auto whitespace-nowrap scrollbar-hide'>
-    {items.map((item) => (
+      <div className='flex w-full  mt-2  ring-yellow-200 ring-[0.4px] p-3 rounded-md '>
+  <div className='flex mx-auto gap-2 lg:gap-6 overflow-x-auto whitespace-nowrap scrollbar-hide cursor-pointer'>
+    {recommended.map((item) => (
       <div key={item.id} className='bg-slate-900 rounded-md p-[3px] h-full w-[150px] flex-shrink-0 gap-1'>
         <img src={item.img} alt={item.name} className="w-full rounded-md h-[180px] object-cover" />
         <p className='ml-2 mt-1 text-[13px] font-thin '>{item.name }</p>
@@ -165,83 +191,95 @@ const App = () => {
   </div>
       </div>
         
+      
+
+      {/* Shoes category */}
       <div
-         className='w-full p-1 mt-5 bg-slate-800 flex justify-between'
-        > <h1 className='ml-2 text-yellow-500'>Shoes</h1>
+         className='w-full p-1 mt-4 sm:mt-[70px]  flex justify-between'
+      > <h1 className='w-[50%] sm:w-[30%] text-yellow-200 bg-black p-1 px-3 
+        text-xs sm:text-[14px] rounded-md rounded-tr-full shadow-white shadow-sm'>
+         Footwear Collection</h1>
         </div>
-      <div className=' mt-2 w-full'>
+            <div className=' w-full mt-2  rounded-md'>
+        <div className='grid grid-cols-2 sm:grid-cols-6 gap-1'>
+          <div className='bg-slate-800 p-1 rounded-sm'>
+            <img src={menshoe} alt="" className='object-cover rounded-sm h-[170px] sm:h-[200px] w-full' />
+            <p className='mb-1 ml-2 p-1'>Sneakers</p>
+          </div>
+          <div className='bg-slate-800 p-1 rounded-sm'>
+            <img src={womenshoe} alt="" className='object-cover rounded-sm h-[170px] sm:h-[200px] w-full' />
+            <p className='mb-1 ml-2 p-1'>Heels</p>
+          </div>
+          <div className='bg-slate-800 p-1 rounded-sm'>
+            <img src={kids} alt="" className='object-cover rounded-sm h-[170px] sm:h-[200px] w-full' />
+            <p className='mb-1 ml-2 p-1'>Kids</p>
+          </div>
+          <div className='bg-slate-800 p-1 rounded-sm'>
+            <img src={crocs} alt="" className='object-cover rounded-sm h-[170px] sm:h-[200px] w-full' />
+            <p className='mb-1 ml-2 p-1'>Summer wear</p>
+          </div>
+          <div className='bg-slate-800 p-1 rounded-sm'>
+            <img src={boots} alt="" className='object-cover rounded-sm h-[170px] sm:h-[200px] w-full' />
+            <p className='mb-1 ml-2 p-1'>Boots</p>
+          </div>
+          <div className='bg-slate-800 p-1 rounded-sm'>
+            <img src={flats} alt="" className='object-cover rounded-sm h-[170px] sm:h-[200px] w-full' />
+            <p className='mb-1 ml-2 p-1'>Flats</p>
+          </div>
+        </div>
+      </div>
+
+      
+
+
+        {/* clothes section */}
+        <div
+         className='w-full p-1 mt-4   flex justify-between'
+      > <h1 className='w-[50%] sm:w-[30%] text-yellow-200 bg-black p-1 px-3 
+        text-xs sm:text-[14px] rounded-md rounded-tr-full shadow-white shadow-sm'>All Fashion Wear</h1>
+        </div>
+            <div className='w-full mt-2 ring-yellow-200 ring-[0.4px] p-2 sm:p-4 rounded-md'>
+      <div className='grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-3'>
+        <div className='bg-slate-950'>
+          <img src={womenwear} alt="" className='h-[170px] sm:h-[300px]  w-full object-cover' />
+          <p className='ml-2 mb-1 p-1'>Women</p>
+        </div>
+        <div className='bg-slate-950'>
+          <img src={menwear} alt="" className='h-[170px] sm:h-[300px]  w-full object-cover' />
+          <p className='ml-2 mb-1 p-1'>Men</p>
+        </div>
+        <div className='bg-slate-950'>
+          <img src={boyswear} alt="" className='h-[170px] sm:h-[300px]  w-full object-cover' />
+          <p className='ml-2 mb-1 p-1'>Boys</p>
+        </div>
+        <div className='bg-slate-950'>
+          <img src={girlswear} alt="" className='h-[170px]  sm:h-[300px]  w-full object-cover' />
+          <p className='ml-2 mb-1 p-1'>Girls</p>
+        </div>
+      </div>
+    </div>
+
         
       
-      <div className='flex flex-col gap-1'>
-        <div className='flex w-full h-[215px] gap-1 p-1  '>
-          <div className='w-1/2 bg-slate-800 p-1 rounded-sm '>
-            <img src={menshoe} alt="" className='object-cover rounded-sm h-[170px] w-full' />
-            <p className='mb-1 ml-2'>Men</p>
-          </div>
-          <div className='w-1/2 bg-slate-800 p-1 rounded-sm'>
-            <img src={Womenshoe} alt=""  className='object-cover rounded-sm h-[170px] w-full'/>
-            <p className='ml-2 '>women</p>
-          </div>
-          
-        </div>
-        <div className='bg-slate-900  h-[250px]'>
-          <div className=' m-1 '>
-            <img src={kids} alt="" className='object-cover w-full max-h-[205px] ' />
-          <p className='ml-2 mb-1 mt-1'>Kids</p>
-          </div>
-          </div>
-        </div>
-        
-
-        <div
-         className='w-full p-1 mt-5 bg-slate-800 flex justify-between'
-        > <h1 className='ml-2 text-yellow-500'>Clothes</h1>
-        </div>
-        <div className='w-full flex flex-col gap-2 p-1'>
-          
-          <div className='flex  w-full gap-2'>
-            <div className='w-1/2 bg-slate-900'>
-              <img src={womenwear} alt="" className='h-[170px] w-full object-cover' />
-              <p className='ml-2 mb-1'>Women</p>
-            </div>
-            <div className='w-1/2 bg-slate-900'>
-              <img src={menwear} alt="" className='h-[170px] w-full object-cover' />
-              <p className='ml-2 mb-1'>Men</p>
-            </div>
-          </div>
-          
-          <div className='flex  w-full gap-2'>
-            <div className='w-1/2 bg-slate-900'>
-              <img src={boyswear} alt="" className='h-[170px] w-full object-cover' />
-              <p className='ml-2 mb-1'>Boys</p>
-            </div>
-            <div className='w-1/2 bg-slate-900'>
-              <img src={girlswear} alt="" className='h-[170px] w-full object-cover' />
-              <p className='ml-2 mb-1'>Girls</p>
-            </div>
-            </div>
-
-        </div>
-        
-      </div>
        
       
-      <div
-         className='w-full p-1 mt-5 bg-slate-800 flex justify-between'
-        > <h1 className='ml-2'>Discounts</h1>
-        </div>
       
-        
-        <div className='flex mt-1'>
+       {/* items on discount */}
+      
+       <div
+         className='w-full p-1 mt-4 sm:mt-[70px]  flex justify-between'
+        > <h1 className='w-[50%] sm:w-[30%] text-yellow-200 bg-black p-1 px-3 text-xs sm:text-[14px] rounded-md rounded-tr-full shadow-white shadow-sm'>Discounted Treasures</h1>
+        </div>
+        <div className='flex mt-2 ring-yellow-200 ring-[0.4px] p-2 rounded-md '>
   <div className='flex mx-auto gap-2 lg:gap-6 overflow-x-auto whitespace-nowrap scrollbar-hide'>
     {discounted.map((item) => (
-      <div key={item.id} className='bg-slate-900 rounded-md p-[3px] h-full w-[180px] flex-shrink-0 gap-1'>
-        <img src={item.img} alt={item.name} className="w-full rounded-md h-[180px] object-cover" />
+      <div key={item.id} className='bg-slate-900 rounded-md p-[3px] h-full w-[180px] sm:w-[240px]  flex-shrink-0 gap-1'>
+        <img src={item.img} alt={item.name} className="w-full rounded-md h-[180px] sm:h-[200px]  object-cover" />
         <p className='ml-2 mt-1 text-[13px] font-thin'>{item.name}</p>
         <p className='ml-2 text-sm font-thin'>Ksh <span className='font-semibold'>{item.price}</span></p>
         
         <div className='flex justify-center'> {/* Wrap button in flex with justify-center */}
-          <button className='p-[2px] my-1 mt-5 w-full mx-2 bg-orange-700 font-semibold rounded-md'>Add</button>
+          <button className='p-[2px] my-2 mt-6 w-full mx-2 bg-orange-700 font-semibold rounded-md'>Add</button>
         </div>
       </div>
     ))}
@@ -249,15 +287,15 @@ const App = () => {
 </div>
 
       
-        
+        {/* brand selection */}
       
-      <div
-         className='w-full p-1 mt-5 bg-slate-800 flex justify-between'
-        > <h1 className='ml-2 text-yellow-500'>Get your Brand</h1>
+<div
+         className='w-full p-1 mt-4 sm:mt-[70px]  flex justify-between'
+        > <h1 className='w-[50%] sm:w-[30%] text-yellow-200 bg-black p-1 px-3 text-xs sm:text-[14px] rounded-md rounded-tr-full shadow-white shadow-sm'>Choose Your Brand</h1>
         </div>
       <div className='m-1'>
         
-        <div className='flex w-full  mt-1  '>
+        <div className='flex w-full mt-6   '>
   <div className='flex mx-auto gap-1 lg:gap-6 overflow-x-auto whitespace-nowrap scrollbar-hide'>
     {brands.map((item) => (
       <div key={item.id} className='bg-slate-900 rounded-md p-[1px] h-full w-[100px] flex-shrink-0 gap-1'>
@@ -271,13 +309,16 @@ const App = () => {
       </div>
       </div>
          
+      
+      {/* new arrivals */}
       <div
-         className='w-full p-1 mt-5 bg-orange-700 flex justify-between'
-        > <h1 className='ml-2 '>New Arrivals</h1>
+         className='w-full p-1 mt-4 sm:mt-[70px]  flex justify-between'
+      > <h1 className='w-[50%] sm:w-[30%] text-yellow-200 bg-black p-1 
+        px-3 text-xs sm:text-[14px] rounded-md rounded-tr-full shadow-white shadow-sm'>New Arrivals</h1>
         </div>
-      <div className='m-1'>
+      <div className='m-1 mt-2'>
         
-        <div className='flex w-full  mt-1  '>
+        <div className='flex w-full bg-slate-300 mt-1 p-2 rounded-md  '>
   <div className='flex mx-auto gap-2 lg:gap-6 overflow-x-auto whitespace-nowrap scrollbar-hide'>
     {newArrivals.map((item) => (
       <div key={item.id} className='bg-slate-900 rounded-md p-[3px] h-full w-[180px] flex-shrink-0 gap-1'>
@@ -292,146 +333,149 @@ const App = () => {
       </div>
 
       
-          
+          {/*category selection  */}
       <div
-         className='w-full p-1 mt-5 bg-orange-700 flex justify-between'
-        > <h1 className='ml-2 '>Quick Categories</h1>
+         className='w-full p-1 mt-4 sm:mt-[70px]  flex justify-between'
+        > <h1 className='w-[50%] sm:w-[30%] text-yellow-200 bg-black p-1 px-3 text-xs sm:text-[14px] rounded-md rounded-tr-full shadow-white shadow-sm'>Browse Categories</h1>
         </div>
-       
-      <div className='w-full flex flex-col gap-2 p-1'>
-         
-          <div className='flex  w-full gap-2'>
-            <div className='w-1/3 bg-slate-900'>
-              <img src={tshirts} alt="" className='h-[130px] w-full object-cover' />
-              <p className='ml-2 mt-1 mb-1 text-xs sm:text-md'>T-shirts</p>
-            </div>
-            <div className='w-1/3 bg-slate-900'>
-              <img src={shirts} alt="" className='h-[130px] w-full object-cover' />
-              <p className='ml-2 mt-1 mb-1 text-xs sm:text-md'>Shirts</p>
-            </div>
-            <div className='w-1/3 bg-slate-900'>
-              <img src={tops} alt="" className='h-[130px] w-full object-cover' />
-              <p className='ml-2 mt-1 mb-1 text-xs sm:text-md'>Tops</p>
-            </div>
-          </div>
-          
-          <div className='flex  w-full gap-2'>
-            <div className='w-1/3 bg-slate-900'>
-              <img src={pants} alt="" className='h-[130px] w-full object-cover' />
-              <p className='ml-2 mt-1 mb-1 text-xs sm:text-md'>Pants</p>
-            </div>
-            <div className='w-1/3 bg-slate-900'>
-              <img src={dresses} alt="" className='h-[130px] w-full object-cover' />
-              <p className='ml-2 mt-1 mb-1 text-xs sm:text-md'>Dresses</p>
-            </div>
-            <div className='w-1/3 bg-slate-900'>
-              <img src={sweaters} alt="" className='h-[130px] w-full object-cover' />
-              <p className='ml-2 mt-1 mb-1 text-xs sm:text-md'>Sweaters</p>
-            </div>
-            </div>
-          <div className='flex  w-full gap-2'>
-            <div className='w-1/3 bg-slate-900'>
-              <img src={skirts} alt="" className='h-[130px] w-full object-cover' />
-              <p className='ml-2 mt-1 mb-1 text-xs sm:text-md'>Skirts</p>
-            </div>
-            <div className='w-1/3 bg-slate-900'>
-              <img src={hoodies} alt="" className='h-[130px] w-full object-cover' />
-              <p className='ml-2 mt-1 mb-1 text-xs sm:text-md'>Hoodies</p>
-            </div>
-            <div className='w-1/3 bg-slate-900'>
-              <img src={pyjamas} alt="" className='h-[130px] w-full object-cover' />
-              <p className='ml-2 mt-1 mb-1 text-xs sm:text-md'>Pyjamas</p>
-            </div>
-            </div>
-          <div className='flex  w-full gap-2'>
-            <div className='w-1/3 bg-slate-900'>
-              <img src={nightdresses} alt="" className='h-[130px] w-full object-cover' />
-              <p className='ml-2 mt-1 mb-1 text-xs sm:text-md'>Night Dresses</p>
-            </div>
-            <div className='w-1/3 bg-slate-900'>
-              <img src={pullnecks} alt="" className='h-[130px] w-full object-cover' />
-              <p className='ml-2 mt-1 mb-1 text-xs sm:text-md'>Pullnecks</p>
-            </div>
-            <div className='w-1/3 bg-slate-900'>
-              <img src={jackets} alt="" className='h-[130px] w-full object-cover' />
-              <p className='ml-2 mt-1 mb-1 text-xs sm:text-md'>Jackets</p>
-            </div>
-           </div>
-            
-        </div>
-           <div
-         className='w-full p-1 mt-5 bg-orange-700 flex justify-between'
-        > <h1 className='ml-2 '>Official</h1>
-        </div>
+     
+      <div className='w-full p-1 sm:p-2 mt-2 ring-yellow-200 ring-[0.4px]'>
+  <div className='grid grid-cols-3 md:grid-cols-6 sm:grid-cols-5 gap-2'>
+    <div className='bg-slate-900'>
+      <img src={tshirts} alt="" className='h-[130px] lg:h-[160px] w-full object-cover' />
+      <p className='ml-2 mt-1  p-1 mb-1 text-xs sm:text-md'>T-shirts</p>
+    </div>
+    <div className='bg-slate-900'>
+      <img src={shirts} alt="" className='h-[130px] lg:h-[160px] w-full object-cover' />
+      <p className='ml-2 mt-1  p-1 mb-1 text-xs sm:text-md'>Shirts</p>
+    </div>
+    <div className='bg-slate-900'>
+      <img src={tops} alt="" className='h-[130px] lg:h-[160px] w-full object-cover' />
+      <p className='ml-2  p-1 mt-1 mb-1 text-xs sm:text-md'>Tops</p>
+    </div>
+    <div className='bg-slate-900'>
+      <img src={pants} alt="" className='h-[130px] lg:h-[160px] w-full object-cover' />
+      <p className='ml-2  p-1 mt-1 mb-1 text-xs sm:text-md'>Pants</p>
+    </div>
+    <div className='bg-slate-900'>
+      <img src={dresses} alt="" className='h-[130px]  lg:h-[160px] w-full object-cover' />
+      <p className='ml-2  p-1 mt-1 mb-1 text-xs sm:text-md'>Dresses</p>
+    </div>
+    <div className='bg-slate-900'>
+      <img src={sweaters} alt="" className='h-[130px] lg:h-[160px] w-full object-cover' />
+      <p className='ml-2  p-1 mt-1 mb-1 text-xs sm:text-md'>Sweaters</p>
+    </div>
+    <div className='bg-slate-900'>
+      <img src={skirts} alt="" className='h-[130px] lg:h-[160px] w-full object-cover' />
+      <p className='ml-2  p-1 mt-1 mb-1 text-xs sm:text-md'>Skirts</p>
+    </div>
+    <div className='bg-slate-900'>
+      <img src={hoodies} alt="" className='h-[130px] lg:h-[160px] w-full object-cover' />
+      <p className='ml-2  p-1 mt-1 mb-1 text-xs sm:text-md'>Hoodies</p>
+    </div>
+    <div className='bg-slate-900'>
+      <img src={pyjamas} alt="" className='h-[130px] lg:h-[160px] w-full object-cover' />
+      <p className='ml-2  p-1 mt-1 mb-1 text-xs sm:text-md'>Pyjamas</p>
+    </div>
+    <div className='bg-slate-900'>
+      <img src={nightdresses} alt="" className='h-[130px] lg:h-[160px] w-full object-cover' />
+      <p className='ml-2  p-1 mt-1 mb-1 text-xs sm:text-md'>Night Dresses</p>
+    </div>
+    <div className='bg-slate-900'>
+      <img src={pullnecks} alt="" className='h-[130px] lg:h-[160px] w-full object-cover' />
+      <p className='ml-2 p-1 mt-1 mb-1 text-xs sm:text-md'>Pullnecks</p>
+    </div>
+    <div className='bg-slate-900'>
+      <img src={jackets} alt="" className='h-[130px] lg:h-[160px] w-full object-cover' />
+      <p className='ml-2 p-1 mt-1 mb-1 text-xs sm:text-md'>Jackets</p>
+    </div>
+  </div>
+</div>
 
-           <div className='w-full flex flex-col gap-2 p-1'>
+         {/* official wear */}
+         <div
+         className='w-full p-1 mt-4 sm:mt-[70px]  flex justify-between'
+        > <h1 className='w-[50%] sm:w-[30%] text-yellow-200 bg-black p-1 px-3 text-xs sm:text-[14px] rounded-md rounded-tr-full shadow-white shadow-sm'>Official wear</h1>
+        </div>
+           <div className='w-full bg-slate-200 mt-2 flex flex-col gap-2 p-1 '>
           
           <div className='w-full flex gap-2'>
-            <div className='w-1/2 bg-slate-900'>
-              <img src={menofficial} alt="" className='h-[150px] w-full object-cover' />
-              <p className='ml-2 mt-1 mb-1 text-sm sm:text-md'>Casual Men</p>
+            <div className='w-1/2 sm:w-[200px] bg-slate-900'>
+              <img src={menofficial} alt="" className='h-[190px] w-full sm:w-[200px] sm:h-[250px] object-cover' />
+              <p className='ml-2 mt-1 mb-1 p-1 text-sm sm:text-md'>Casual Men</p>
             </div>
-            <div className='w-1/2 bg-slate-900'>
-              <img src={womenofficial} alt="" className='h-[150px] w-full object-cover' />
-              <p className='ml-2 mt-1 mb-1 text-sm sm:text-md'>Casual Women</p>
+            <div className='w-1/2 sm:w-[200px] bg-slate-900'>
+              <img src={womenofficial} alt="" className='h-[190px] w-full sm:w-[200px]  sm:h-[250px] object-cover' />
+              <p className='ml-2 mt-1 mb-1 p-1 text-sm sm:text-md'>Casual Women</p>
             </div>
             </div>
              </div>
              
 
-
-        <div
-         className='w-full p-1 mt-5 bg-orange-700 flex justify-between'
-        > <h1 className='ml-2 '>Utilities</h1>
+              {/* utilities */}
+              <div
+         className='w-full p-1 mt-4 sm:mt-[70px]  flex justify-between'
+        > <h1 className='w-[50%] sm:w-[30%] text-yellow-200 bg-black p-1 px-3 text-xs sm:text-[14px] rounded-md rounded-tr-full shadow-white shadow-sm'>Intimates and Essentials</h1>
         </div>
-      <div className='w-full flex flex-col gap-2 p-1'>
-       
-         
-          <div className='flex  w-full gap-2'>
-            <div className='w-1/2 bg-slate-900'>
-              <img src={cape} alt="" className='h-[170px] w-full object-cover' />
-              <p className='ml-2 mb-1'>Caps</p>
-            </div>
-            <div className='w-1/2 bg-slate-900'>
-              <img src={pantie} alt="" className='h-[170px] w-full object-cover' />
-              <p className='ml-2 mb-1'>Men</p>
-            </div>
-          </div>
-          
-          <div className='flex  w-full gap-2'>
-            <div className='w-1/2 bg-slate-900'>
-              <img src={belt} alt="" className='h-[170px] w-full object-cover' />
-              <p className='ml-2 mb-1'>Belts</p>
-            </div>
-            <div className='w-1/2 bg-slate-900'>
-              <img src={boxer} alt="" className='h-[170px] w-full object-cover' />
-              <p className='ml-2 mb-1'>Panties</p>
-            </div>
-            </div>
-          <div className='flex  w-full gap-2'>
-            <div className='w-1/2 bg-slate-900'>
-              <img src={bra} alt="" className='h-[170px] w-full object-cover' />
-              <p className='ml-2 mb-1'>Bras</p>
-            </div>
-            <div className='w-1/2 bg-slate-900'>
-              <img src={socks} alt="" className='h-[170px] w-full object-cover' />
-              <p className='ml-2 mb-1'>Socks</p>
-            </div>
+                        <div className='w-full mt-2 bg-black p-1 sm:p-2 ring-yellow-200 ring-[0.4px] rounded-md'>
+              <div className='grid grid-cols-2 sm:grid-cols-5 gap-2'>
+                <div className='bg-slate-900'>
+                  <img src={cape} alt="" className='h-[170px] sm:h-[200px] w-full object-cover' />
+                  <p className='ml-2 mb-1 p-1'>Caps</p>
+                </div>
+                <div className='bg-slate-900'>
+                  <img src={pantie} alt="" className='h-[170px] sm:h-[200px] w-full object-cover' />
+                  <p className='ml-2 mb-1 p-1'>Men</p>
+                </div>
+                <div className='bg-slate-900'>
+                  <img src={belt} alt="" className='h-[170px] sm:h-[200px] w-full object-cover' />
+                  <p className='ml-2 mb-1 p-1'>Belts</p>
+                </div>
+                <div className='bg-slate-900'>
+                  <img src={boxer} alt="" className='h-[170px] sm:h-[200px] w-full object-cover' />
+                  <p className='ml-2 mb-1 p-1'>Panties</p>
+                </div>
+                <div className='bg-slate-900'>
+                  <img src={bra} alt="" className='h-[170px] sm:h-[200px] w-full object-cover' />
+                  <p className='ml-2 mb-1 p-1'>Bras</p>
+                </div>
+                <div className='bg-slate-900'>
+                  <img src={socks} alt="" className='h-[170px] sm:h-[200px] w-full object-cover' />
+                  <p className='ml-2 mb-1 p-1'>Socks</p>
+                </div>
+                <div className='bg-slate-900'>
+                  <img src={towels} alt="" className='h-[170px] sm:h-[200px] w-full object-cover' />
+                  <p className='ml-2 mb-1 p-1'>Towels</p>
+                </div>
+                <div className='bg-slate-900'>
+                  <img src={durags} alt="" className='h-[170px] sm:h-[200px] w-full object-cover' />
+                  <p className='ml-2 mb-1 p-1'>Durags</p>
+                </div>
+                <div className='bg-slate-900'>
+                  <img src={robes} alt="" className='h-[170px] sm:h-[200px] w-full object-cover' />
+                  <p className='ml-2 mb-1 p-1'>Robes</p>
+                </div>
+                <div className='bg-slate-900'>
+                  <img src={stockings} alt="" className='h-[170px] sm:h-[200px] w-full object-cover' />
+                  <p className='ml-2 mb-1 p-1'>Stockings</p>
+                </div>
+              </div>
             </div>
 
-      </div>
 
       <div className=' flex flex-col text-center bg-slate-900 p-2 mt-5 justify-center'>
-        <h1 className='text-yellow-500'>Dint find your suit</h1>
+        <h1 className='text-yellow-300'>Still looking for your perfect suit?</h1>
         <button className='bg-orange-800 mx-5 rounded-lg py-2 mt-2 mb-1 text-white font-semibold'>Search Our store</button>
         
       </div>
       
+      
+
+      </div>
       <div className='p-1 m-2 bg-slate-900 mt-4'>
         <Testimonials/>
       </div>
-
-  </div>
+      </>
   );
 };
 

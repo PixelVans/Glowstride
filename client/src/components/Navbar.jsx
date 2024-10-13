@@ -4,7 +4,7 @@ import { FaUser } from 'react-icons/fa';
 
 function Navbar() {
   return (
-    <div className='bg-slate-900 w-full'>
+    <div className='bg-slate-950 w-full'>
       <div className='sm:mx-[30px] mx-[10px]'>
         <div className='flex justify-between w-full p-2'>
           <div className='text-white block md:hidden mt-2'>
