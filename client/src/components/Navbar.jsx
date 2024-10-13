@@ -15,6 +15,7 @@ function Navbar() {
           <h1 className='text-white'>Glowstride</h1>
           <form className='w-[300px] mt-1 hidden md:flex'>
             <input
+              id='search'
               className='p-[2px] pl-5 w-full rounded'
               type="text" 
               placeholder='Search..' 
