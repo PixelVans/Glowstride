@@ -12,11 +12,21 @@ import {
   recommended, shoes, womenofficial, womenwear
 } from './utils/data';
 import { settings } from './utils/slidersettings';
+import { Link, useNavigate } from 'react-router-dom';
 
     
 const App = () => {
+  const navigate = useNavigate();
 
+  const handleDivClick = (id) => {
+    navigate(`/post/${id}`);
+  };
 
+  //add to cart logic
+  const handleAddToCart = (item, e) => {
+    e.stopPropagation(); // Prevent the div click from firing
+    addToCart(item); // Call the addToCart function with the item
+  };
 
  
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -39,7 +49,8 @@ const App = () => {
   }, [banners.length]);
 
   return (
-    <> <div className='text-center p-2'>
+    <>
+      <div className='text-center p-2'>
         <h1 className='text-yellow-200 font-extralight text-lg sm:text-2xl'>Timeless Trends</h1>
         <hr className='my-1 border-t-[0.01px] border-yellow-100 ' />
 
@@ -61,28 +72,42 @@ const App = () => {
         />
         
       </div>
-      </div>
-      <div
+        </div>
+
+        <div
          className='w-full p-1 mt-4 sm:mt-[70px]  flex justify-between'
         > <h1 className='w-[50%] sm:w-[30%] text-yellow-200 bg-black p-1 px-3 text-xs sm:text-[14px] 
         rounded-md rounded-tr-full shadow-white shadow-sm'>Reccomended for you</h1>
         </div>
-      
-
-      <div className='flex w-full  mt-2 ring-yellow-200 ring-[0.4px] p-3 rounded-md'>
-      <Slider {...settings} className="flex mx-auto gap-2 lg:gap-3 overflow-x-auto whitespace-nowrap scrollbar-hide cursor-pointer">
+        <Slider {...settings} className=' ring-yellow-200  ring-[0.4px] p-3 mt-2  rounded-md'>
         {recommended.map((item) => (
-          <div key={item.id} className='rounded-md p-[3px] w-[150px] sm:w-[170px] flex-shrink-0'>
-            <img src={item.img} alt={item.name} className="w-full rounded-md h-[180px] object-cover" />
-            <p className='ml-2 mt-1 text-[13px] font-thin'>{item.name}</p>
-            <p className='ml-2 my-2 text-sm font-thin'>Ksh <span className='font-thin'>{item.price}</span></p>
-            <div className='flex justify-center'>
-              <button className='p-[2px] my-1 mt-5 w-full mx-2 bg-orange-900 rounded-md'>Add</button>
-            </div>
-          </div>
-        ))}
-      </Slider>
+    <div
+      onClick={() => handleDivClick(item.id)}
+      key={item.id}
+      className='rounded-md p-[3px] w-[150px]  shadow-black shadow-md my-2 sm:w-[170px] flex-shrink-0 overflow-hidden'
+    >
+      <div className="relative w-full h-[180px] overflow-hidden">
+        <img
+          src={item.img}
+          alt={item.name}
+          className="w-full h-full object-cover transition-transform duration-300 ease-in-out hover:scale-105"
+        />
+      </div>
+      <p className='ml-2 mt-1 text-[13px] font-thin'>{item.name}</p>
+      <p className='ml-2 my-2 text-sm font-thin'>Ksh <span className='font-thin'>{item.price.toLocaleString()}</span></p>
+      <div className='flex flex-row-reverse'>
+        <button
+          onClick={(e) => handleAddToCart(item, e)}
+          className='text-orange-400 text-4xl mr-4 mb-1 rounded-full w-5 hover:text-yellow-400'
+        >
+          +
+        </button>
+      </div>
     </div>
+    ))}
+        </Slider>
+
+     
         
       
 
@@ -95,7 +120,7 @@ const App = () => {
       <div className='w-full mt-2 rounded-md'>
         <div className='grid grid-cols-2 sm:grid-cols-6 gap-1'>
           {Object.entries(shoes).map(([key, shoe]) => (
-            <div key={key} className='p-1 rounded-sm'>
+            <div key={key} className='p-1 rounded-sm shadow-black shadow-md'>
               <img
                 src={shoe.src}
                 alt={shoe.label}
@@ -143,20 +168,21 @@ const App = () => {
          className='w-full p-1 mt-4 sm:mt-[70px]  flex justify-between'
         > <h1 className='w-[50%] sm:w-[30%] text-yellow-200 bg-black p-1 px-3 text-xs sm:text-[14px] rounded-md rounded-tr-full shadow-white shadow-sm'>Discounted Treasures</h1>
         </div>
-        <div className='flex mt-2 ring-yellow-200 ring-[0.4px] p-2 rounded-md '>
-        <Slider {...settings} className="flex mx-auto gap-2 lg:gap-3 overflow-x-auto whitespace-nowrap scrollbar-hide cursor-pointer">
+        
+        <Slider {...settings} className=" ring-yellow-200 ring-[0.4px] p-3 rounded-md mt-2">
         {discounted.map((item) => (
-          <div key={item.id} className='rounded-md p-[3px] h-full w-[150px] sm:w-[170px] flex-shrink-0'>
-            <img src={item.img} alt={item.name} className="w-full rounded-md h-[180px] object-cover" />
+          <div key={item.id} className='rounded-md p-[3px] shadow-black shadow-md my-2   h-full w-[150px] sm:w-[170px] flex-shrink-0'>
+            <img src={item.img} alt={item.name} className="w-full rounded-md  h-[180px] object-cover" />
             <p className='ml-2 mt-1 text-[13px] font-thin'>{item.name}</p>
             <p className='ml-2 my-2 text-sm font-thin'>Ksh <span className='font-thin'>{item.price}</span></p>
-            <div className='flex justify-center'>
-              <button className='p-[2px] my-1 mt-5 w-full mx-2 bg-orange-900 rounded-md'>Add</button>
+            <div className='flex flex-row-reverse'>
+              
+              <button className='text-orange-400 text-3xl mr-3 mb-1 rounded-full w-5'>+</button>
             </div>
           </div>
         ))}
       </Slider>
-      </div>
+      
 
       
         {/* brand selection */}
@@ -171,12 +197,14 @@ const App = () => {
                   <div className='flex w-full mt-6   '>
             <div className='flex mx-auto gap-1 lg:gap-6 overflow-x-auto whitespace-nowrap scrollbar-hide'>
               {brands.map((item) => (
+                <Link to={`/search?brand=${item.name}`}>
                 <div key={item.id} className='bg-slate-900 rounded-md p-[1px] h-full w-[100px] flex-shrink-0 gap-1'>
                   <img src={item.img} alt={item.name} className="w-full rounded-md h-[100px] object-cover" />
                   
                 
                     
-                </div>
+                  </div>
+                </Link>
               ))}
             </div>
                 </div>
@@ -189,20 +217,21 @@ const App = () => {
                 > <h1 className='w-[50%] sm:w-[30%] text-yellow-200 bg-black p-1 
                   px-3 text-xs sm:text-[14px] rounded-md rounded-tr-full shadow-white shadow-sm'>New Arrivals</h1>
                   </div>
-                  <div className='flex mt-2 ring-yellow-200 ring-[0.4px] p-2 rounded-md '>
-                  <Slider {...settings} className="flex mx-auto gap-2 lg:gap-3 overflow-x-auto whitespace-nowrap scrollbar-hide cursor-pointer">
+                 
+                  <Slider {...settings} className="mt-2 ring-yellow-200 ring-[0.4px] p-3 rounded-md cursor-pointer">
                   {newArrivals.map((item) => (
-                    <div key={item.id} className='rounded-md p-[3px] h-full w-[150px] sm:w-[170px] flex-shrink-0'>
+                    <div key={item.id} className='rounded-md p-[3px] shadow-black shadow-md my-2 h-full w-[150px] sm:w-[170px] flex-shrink-0'>
                       <img src={item.img} alt={item.name} className="w-full rounded-md h-[180px] object-cover" />
                       <p className='ml-2 mt-1 text-[13px] font-thin'>{item.name}</p>
                       <p className='ml-2 my-2 text-sm font-thin'>Ksh <span className='font-thin'>{item.price}</span></p>
-                      <div className='flex justify-center'>
-                        <button className='p-[2px] my-1 mt-5 w-full mx-2 bg-orange-900 rounded-md'>Add</button>
-                      </div>
+                      <div className='flex flex-row-reverse'>
+              
+                         <button className='text-orange-400 text-3xl mr-3 mb-1 rounded-full w-5'>+</button>
+                     </div>
                     </div>
                   ))}
                 </Slider>
-          </div>
+       
 
                   {/* Category selection */}
             <div className='w-full p-1 mt-4 sm:mt-[70px] flex justify-between'>
@@ -253,10 +282,10 @@ const App = () => {
         </h1>
       </div>
 
-      <div className='w-full mt-2 bg-black p-1 sm:p-2 ring-yellow-200 ring-[0.4px] rounded-md'>
+      <div className='w-full mt-2  p-1 sm:p-2 ring-yellow-200 ring-[0.4px] rounded-md'>
         <div className='grid grid-cols-2 sm:grid-cols-5 gap-2'>
           {Object.entries(essentials).map(([key, item]) => (
-            <div key={item.id} className='bg-slate-900'>
+            <div key={item.id} className='shadow-black shadow-md hover:shadow-white my-1 mx-1 '>
               <img src={item.img} alt={key} className='h-[170px] sm:h-[200px] w-full object-cover' />
               <p className='ml-2 mb-1 p-1 capitalize'>{key}</p>
             </div>

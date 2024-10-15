@@ -1,8 +1,14 @@
 import React from 'react';
 import { FaShoppingCart } from 'react-icons/fa';
 import { FaUser } from 'react-icons/fa';
+import { Link, useNavigate } from 'react-router-dom';
 
 function Navbar() {
+  const categories = ["Men", "Women", "Kids", "Shoes", "Clothes", "Trending"];
+ 
+
+
+
   return (
     <div className='bg-slate-950 w-full'>
       <div className='sm:mx-[30px] mx-[10px]'>
@@ -12,7 +18,10 @@ function Navbar() {
             <div className='w-[24px] h-[2px] mt-1 bg-slate-100'></div>
             <div className='w-[22px] h-[2px] mt-1 bg-slate-100'></div>
           </div>
-          <h1 className='text-white'>Glowstride</h1>
+          <Link to={"/"}>
+           <h1 className='text-white'>Glowstride</h1> 
+          </Link>
+          
           <form className='w-[300px] mt-1 hidden md:flex'>
             <input
               id='search'
@@ -43,15 +52,19 @@ function Navbar() {
               
         {/* Category Section with Horizontal Scroll and Hidden Scrollbar */}
         <div className='flex gap-3 p-2 w-full pb-2 mx-auto items-center'>
-          <div className='flex mx-auto gap-6 overflow-x-auto whitespace-nowrap scrollbar-hide'>
-            <div className='text-white border-b-[3px] border-transparent hover:border-orange-400 px-4 cursor-pointer'>Men</div>
-            <div className='text-white border-b-[3px] border-transparent hover:border-orange-400 px-4 cursor-pointer'>Women</div>
-            <div className='text-white border-b-[3px] border-transparent hover:border-orange-400 px-4 cursor-pointer'>Kids</div>
-            <div className='text-white border-b-[3px] border-transparent hover:border-orange-400 px-4 cursor-pointer'>Shoes</div>
-            <div className='text-white border-b-[3px] border-transparent hover:border-orange-400 px-4 cursor-pointer'>Clothes</div>
-            <div className='text-white border-b-[3px] border-transparent hover:border-orange-400 px-4 cursor-pointer'>Trending</div>
-          </div>
-        </div>
+    <div className='flex mx-auto gap-6 overflow-x-auto whitespace-nowrap scrollbar-hide'>
+            {categories.map((category, index) => (
+         <Link to={`/search?category=${category}`}>
+        <div
+          key={index}
+          className='text-white border-b-[3px] pb-2 border-transparent hover:border-orange-400 px-4 cursor-pointer'
+        >
+          {category}
+                </div>
+              </Link>
+      ))}
+    </div>
+  </div>
       </div>
     </div>
   )

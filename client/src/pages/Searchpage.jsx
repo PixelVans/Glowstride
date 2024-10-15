@@ -1,11 +1,19 @@
 import React, { useState } from 'react';
 import { PriceSlider } from '../components/RangeSlide';  // Import the PriceSlider component
+import { recommended } from '../utils/data';
+
+
+
 
 export const Searchpage = () => {
   const [minPrice, setMinPrice] = useState(100); // Starting minimum price
   const [maxPrice, setMaxPrice] = useState(20000); // Starting maximum price
   const minRange = 67; // Define the minimum range
   const maxRange = 20000; // Define the maximum range
+
+  // to fetch search results from the database
+  const searchResults = recommended;
+
 
   const handleMinChange = (event) => {
     const value = Math.min(event.target.value, maxPrice);
@@ -18,8 +26,11 @@ export const Searchpage = () => {
   };
 
   return (
-    <div className='flex flex-col min-h-screen md:flex-row'>
-      <div className='w-full md:w-1/6 p-2 sm:p-5'>
+    <> 
+    <div className='flex flex-col min-h-screen sm:flex-row'>
+        {/* sort categories */}
+        
+      <div className='w-full md:w-2/6 lg:w-1/6 p-2 sm:p-5 shadow-sm shadow-slate-600 hidden sm:block'>
         <div className='w-full flex flex-col gap-2'>
         <h1 className='text-yellow-300 font-thin mt-5 text-center'>Category</h1> <hr />
           <div className='text-white font-thin p-2 sm:p-2 rounded-md hover:bg-orange-700'>Kids</div>
@@ -33,6 +44,7 @@ export const Searchpage = () => {
              </div>
           
           <div className='text-white p-2 sm:p-2 rounded-md hover:bg-slate-900'>
+
             {/* Use PriceSlider component */}
                       <PriceSlider
                           className="mb-2"
@@ -59,10 +71,45 @@ export const Searchpage = () => {
           <div className='text-white p-2 font-thin sm:p-2 rounded-md hover:bg-orange-700'>Converse</div>
               </div>
               <div className='h-9'></div>
-      </div> 
-          <div className='w-full md:w-5/6 bg-red-50'>
-           <h1>hhhhh</h1>
+        </div> 
+        
+        {/* results area */}
+        <div className='w-full lg:w-5/6 md:w-4/6 items-center  '>
+          <div className='flex justify-between'>
+            <h1 className='ml-5  my-2 text-white text-xs font-thin'>Found 1200 results</h1>
+            <button className='text-orange-300 mr-4 flex sm:hidden'>Filter results</button>
           </div>
-    </div>
+          
+
+        <div className='flex  '>
+            <div className='lg:mx-auto lg:p-5 md:p-1 flex flex-wrap '>
+            {searchResults.map((item) => (
+          <div key={item.id} className='rounded-md p-[3px] mb-5 shadow-black shadow-md  mx-auto w-1/2 sm:w-[170px] '>
+            <img src={item.img} alt={item.name} className="w-full rounded-md h-[180px] object-cover" />
+            <p className='ml-2 mt-1 text-[13px] font-thin text-white'>{item.name}</p>
+            <p className='ml-2 my-2 text-sm font-thin text-white'>Ksh <span className='font-thin'>{item.price.toLocaleString()}</span></p>
+            <div className='flex flex-row-reverse'>
+              
+              <button className='text-orange-400 text-3xl mr-3 mb-1 rounded-full w-5'>+</button>
+            </div>
+          </div>
+        ))}
+          </div>
+          </div>
+            
+          {/* pagination */}
+          <div className='flex items-center text-center  gap-6 mt-5 justify-center'>
+
+            <button className='text-white text-center mx-3'>Prev</button>
+            <button className='text-white text-center'>1</button>
+            <button className='text-white text-center'>2</button>
+            <button className='text-white text-center'>3</button>
+            <button className='text-white text-center'>4</button>
+            <button className='text-white text-center mx-3'>Next</button>
+           
+           </div>
+          </div>
+      </div>
+      </>
   );
 };

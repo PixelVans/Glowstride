@@ -9,6 +9,7 @@ import 'slick-carousel/slick/slick-theme.css';
 import Navbar from './components/Navbar.jsx';
 import Footer from './components/Footer.jsx';
 import { Searchpage } from './pages/Searchpage.jsx'; // Import your new SearchPage component
+import PostPage from './pages/PostPage.jsx';
 
 const root = createRoot(document.getElementById('root'));
 root.render(
@@ -17,7 +18,8 @@ root.render(
       <Navbar />
       <Routes>
         <Route path="/" element={<App />} />
-        <Route path="/search" element={<Searchpage />} /> {/* Define the search page route */}
+        <Route path="/search" element={<Searchpage />} />
+        <Route path="/post/:id" element={<PostPage />} />
       </Routes>
       <Footer />
     </Router>

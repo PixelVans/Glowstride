@@ -93,12 +93,12 @@ const Testimonials = () => {
               <div className='text-center mb-10 max-w-[600px] mx-auto'>
           <p
              data-aos='fade-up'
-            className='text-sm text-primary'>
+            className='text-sm  text-yellow-100'>
             What our customers are saying
           </p>
           <h1
              data-aos='fade-up'
-            className='text-xl sm:text-3xl mb-1 font-bold'>Testimonials</h1>
+            className='text-xl sm:text-3xl mb-1  text-white'>Testimonials</h1>
           <p
               data-aos='fade-up'
             className='text-xs text-gray-400'> 
@@ -114,7 +114,7 @@ const Testimonials = () => {
                           <div className='my-1'>
                           <div
                               key={data.id}
-                              className='flex flex-col gap-4 shadow-lg 
+                              className='flex flex-col gap-4 shadow-lg shadow-black
                           sm:py-8 px-6 mx-4 rounded-xl dark:bg-gray-800 bg-primary/10 relative'>
                               
                               <div className='mb-1'>
@@ -127,16 +127,16 @@ const Testimonials = () => {
                                       <p className='text-xs text-gray-500'>
                                           {data.text}
                                       </p>
-                                      <h1 className='text-xl font-bold  text-white
-                                      dark:text-white'> {data.name} </h1>
+                                      <h1 className='text-xl   
+                                      text-yellow-200'> {data.name} </h1>
                                   </div>
                                   </div>
                                   
                                   <p
-                                      className='text-black/20 text-5xl sm:text-9xl 
+                                      className='text-black/20 text-4xl sm:text-4xl 
                                   font-serif absolute top-0 right-0'><span
                                       className='text-white 
-                                      dark:text-white/50'>,,</span></p>
+                                      dark:text-white/50 mr-4'>,,</span></p>
 
                               </div>
                           </div>

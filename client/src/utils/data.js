@@ -183,18 +183,18 @@ export const banners = [
   
 ];
  export const recommended = [
-  { id: 1, name: 'items1', img: im1, price: 2 },
-  { id: 2, name: 'items2', img: im2, price: 12  },
-  { id: 3, name: 'items3', img: im3 , price: 32 },
-  { id: 4, name: 'items4', img: im5, price: 12  },
-  { id: 5, name: 'items5', img: im4, price: 10  },
-  { id: 6, name: 'items4', img: im1, price: 15  },
-  { id: 7, name: 'items4', img: im4, price: 11  },
-  { id: 8, name: 'items4', img: im4, price: 11  },
-  { id: 9, name: 'items4', img: im4, price: 11  },
-  { id: 17, name: 'items4', img: im4, price: 11  },
-  { id: 27, name: 'items4', img: im4, price: 11  },
-  { id: 47, name: 'items4', img: im4, price: 11  },
+  { id: 1, name: 'items1', img: im1, price: 2000 },
+  { id: 2, name: 'items2', img: im2, price: 1200  },
+  { id: 3, name: 'items3', img: im3 , price: 3200 },
+  { id: 4, name: 'items4', img: im5, price: 1200  },
+  { id: 5, name: 'items5', img: im4, price: 1900  },
+  { id: 6, name: 'items4', img: im1, price: 1500  },
+  { id: 7, name: 'items4', img: im4, price: 1100  },
+  { id: 8, name: 'items4', img: im4, price: 1400  },
+  { id: 9, name: 'items4', img: im4, price: 1200  },
+  { id: 17, name: 'items4', img: im4, price: 2100  },
+  { id: 27, name: 'items4', img: im4, price: 1100  },
+  { id: 47, name: 'items4', img: im4, price: 3100  },
 ];
 
 export const discounted = [
@@ -207,15 +207,15 @@ export const discounted = [
   { id: 7, name: 'items4', img: disc1, price: 11  },
 ];
 export const brands = [
-  { id: 1, name: 'items1', img: vans, price: 2 },
-  { id: 2, name: 'items2', img: adiddas, price: 12  },
-  { id: 3, name: 'items3', img: jordan , price: 32 },
-  { id: 4, name: 'items4', img: gucci, price: 12  },
-  { id: 5, name: 'items5', img: nike, price: 10  },
-  { id: 6, name: 'items4', img: disc2, price: 15  },
-  { id: 7, name: 'items4', img: disc1, price: 11 },
-  { id: 8, name: 'items2', img: adiddas, price: 102 },
-  { id: 9, name: 'items2', img: adiddas, price: 112  },
+  { id: 1, name: 'vans', img: vans, price: 2 },
+  { id: 2, name: 'adidas', img: adiddas, price: 12  },
+  { id: 3, name: 'jordan', img: jordan , price: 32 },
+  { id: 4, name: 'gucci', img: gucci, price: 12  },
+  { id: 5, name: 'nike', img: nike, price: 10  },
+  { id: 6, name: 'nike', img: disc2, price: 15  },
+  { id: 7, name: 'timber', img: disc1, price: 11 },
+  { id: 8, name: 'adidas', img: adiddas, price: 102 },
+  { id: 9, name: 'adidas', img: adiddas, price: 112  },
 ];
 export const newArrivals = [
   { id: 1, name: 'items1', img: arrival1, price: 2 },
