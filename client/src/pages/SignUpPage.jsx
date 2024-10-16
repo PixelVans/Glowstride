@@ -84,7 +84,7 @@ const SignUpPage = () => {
           </p>
           <p className="mt-2">
             Forgot your password?{' '}
-            <a href="/forgot-password" className="text-orange-400 hover:underline">
+            <a href="/reset" className="text-orange-400 hover:underline">
               Reset it
             </a>
           </p>
