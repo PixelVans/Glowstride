@@ -73,18 +73,24 @@ const App = () => {
         
       </div>
         </div>
-
+          
+        
+        {/* recommended items */}
         <div
          className='w-full p-1 mt-4 sm:mt-[70px]  flex justify-between'
         > <h1 className='w-[50%] sm:w-[30%] text-yellow-200 bg-black p-1 px-3 text-xs sm:text-[14px] 
         rounded-md rounded-tr-full shadow-white shadow-sm'>Reccomended for you</h1>
+          <Link to={"/search?recommended"}>
+            <h1 className='text-orange-200 cursor-pointer hover:underline'>See all</h1>
+          </Link>
+         
         </div>
         <Slider {...settings} className=' ring-yellow-200  ring-[0.4px] p-3 mt-2  rounded-md'>
         {recommended.map((item) => (
     <div
       onClick={() => handleDivClick(item.id)}
       key={item.id}
-      className='rounded-md p-[3px] w-[150px]  shadow-black shadow-md my-2 sm:w-[170px] flex-shrink-0 overflow-hidden'
+      className='rounded-md p-[3px] w-[150px]  shadow-black shadow-md my-2 sm:w-[170px] flex-shrink-0 '
     >
       <div className="relative w-full h-[180px] overflow-hidden">
         <img
@@ -113,20 +119,23 @@ const App = () => {
 
          {/* Shoes category */}
       <div className='w-full p-1 mt-4 sm:mt-[70px] flex justify-between'>
-        <h1 className='w-[50%] sm:w-[30%] text-yellow-200 bg-black p-1 px-3 text-xs sm:text-[14px] rounded-md rounded-tr-full shadow-white shadow-sm'>
+          <h1 className='w-[50%] sm:w-[30%] text-yellow-200 bg-black p-1 px-3 text-xs 
+          sm:text-[14px] rounded-md rounded-tr-full
+         shadow-white shadow-sm'>
           Footwear Collection
         </h1>
       </div>
       <div className='w-full mt-2 rounded-md'>
         <div className='grid grid-cols-2 sm:grid-cols-6 gap-1'>
           {Object.entries(shoes).map(([key, shoe]) => (
-            <div key={key} className='p-1 rounded-sm shadow-black shadow-md'>
+            <div key={key} className='p-1 rounded-sm shadow-black shadow-md overflow-hidden'>
               <img
                 src={shoe.src}
                 alt={shoe.label}
-                className='object-cover rounded-sm h-[170px] sm:h-[200px] w-full'
+                className='object-cover rounded-sm h-[170px] sm:h-[200px] w-full 
+                transition-transform duration-300 ease-in-out hover:scale-105'
               />
-              <p className='mb-1 ml-2 p-1'>{shoe.label}</p>
+              <p className='mb-1 ml-2 p-1 mt-1 sm:mt-2'>{shoe.label}</p>
             </div>
           ))}
         </div>
@@ -135,23 +144,25 @@ const App = () => {
                 
 
 
-            {/* Clothes section */}
+            {/* all fashion wear section */}
         <div className='w-full p-1 mt-4 flex justify-between'>
-          <h1 className='w-[50%] sm:w-[30%] text-yellow-200 bg-black p-1 px-3 text-xs sm:text-[14px] rounded-md rounded-tr-full shadow-white shadow-sm'>
+          <h1 className='w-[50%] sm:w-[30%] text-yellow-200 bg-black p-1 px-3 text-xs sm:text-[14px]
+           rounded-md rounded-tr-full shadow-white shadow-sm'>
             All Fashion Wear
           </h1>
         </div>
         <div className='w-full mt-2 ring-yellow-200 ring-[0.4px] p-2 sm:p-4 rounded-md'>
-          <div className='grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-3'>
+          <div className='grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-3 rounded-md'>
             {[
               { src: womenwear, label: 'Women' },
               { src: menwear, label: 'Men' },
               { src: boyswear, label: 'Boys' },
               { src: girlswear, label: 'Girls' }
             ].map((wear, index) => (
-              <div key={index} className='bg-slate-950'>
-                <img src={wear.src} alt={wear.label} className='h-[170px] sm:h-[300px] w-full object-cover' />
-                <p className='ml-2 mb-1 p-1'>{wear.label}</p>
+              <div key={index} className='bg-slate-950 overflow-hidden rounded-md'>
+                <img src={wear.src} alt={wear.label} className='h-[170px] sm:h-[300px] w-full object-cover
+                 transition-transform duration-300 ease-in-out hover:scale-105' />
+                <p className='ml-2 mb-1 p-1 mt-1 sm:mt-2'>{wear.label}</p>
               </div>
             ))}
           </div>
@@ -166,18 +177,28 @@ const App = () => {
       
        <div
          className='w-full p-1 mt-4 sm:mt-[70px]  flex justify-between'
-        > <h1 className='w-[50%] sm:w-[30%] text-yellow-200 bg-black p-1 px-3 text-xs sm:text-[14px] rounded-md rounded-tr-full shadow-white shadow-sm'>Discounted Treasures</h1>
+        > <h1 className='w-[50%] sm:w-[30%] text-yellow-200 bg-black p-1 px-3 text-xs sm:text-[14px] 
+        rounded-md rounded-tr-full shadow-white shadow-sm'>Discounted Treasures</h1>
+            <Link to={"/search?discounted"}>
+            <h1 className='text-orange-200 cursor-pointer hover:underline'>See all</h1>
+          </Link>
         </div>
         
         <Slider {...settings} className=" ring-yellow-200 ring-[0.4px] p-3 rounded-md mt-2">
         {discounted.map((item) => (
-          <div key={item.id} className='rounded-md p-[3px] shadow-black shadow-md my-2   h-full w-[150px] sm:w-[170px] flex-shrink-0'>
-            <img src={item.img} alt={item.name} className="w-full rounded-md  h-[180px] object-cover" />
+          <div
+          onClick={() => handleDivClick(item.id)}
+            key={item.id} className='rounded-md p-[3px] sm:p-[10px] shadow-black shadow-md my-2 overflow-hidden
+            h-full w-[150px] sm:w-[170px] flex-shrink-0'>
+            <img src={item.img} alt={item.name} className="w-full rounded-md  h-[180px] object-cover
+             transition-transform duration-300 ease-in-out hover:scale-105" />
             <p className='ml-2 mt-1 text-[13px] font-thin'>{item.name}</p>
             <p className='ml-2 my-2 text-sm font-thin'>Ksh <span className='font-thin'>{item.price}</span></p>
             <div className='flex flex-row-reverse'>
               
-              <button className='text-orange-400 text-3xl mr-3 mb-1 rounded-full w-5'>+</button>
+              <button
+                  onClick={(e) => handleAddToCart(item, e)}
+                className='text-orange-400 text-3xl mr-3 mb-1 rounded-full w-5'>+</button>
             </div>
           </div>
         ))}
@@ -198,8 +219,9 @@ const App = () => {
             <div className='flex mx-auto gap-1 lg:gap-6 overflow-x-auto whitespace-nowrap scrollbar-hide'>
               {brands.map((item) => (
                 <Link to={`/search?brand=${item.name}`}>
-                <div key={item.id} className='bg-slate-900 rounded-md p-[1px] h-full w-[100px] flex-shrink-0 gap-1'>
-                  <img src={item.img} alt={item.name} className="w-full rounded-md h-[100px] object-cover" />
+                <div key={item.id} className='bg-slate-900 rounded-md p-[1px] h-full w-[100px] flex-shrink-0 gap-1 overflow-hidden'>
+                    <img src={item.img} alt={item.name} className="w-full rounded-md h-[100px] object-cover
+                   transition-transform duration-300 ease-in-out hover:scale-105" />
                   
                 
                     
@@ -216,36 +238,55 @@ const App = () => {
                   className='w-full p-1 mt-4 sm:mt-[70px]  flex justify-between'
                 > <h1 className='w-[50%] sm:w-[30%] text-yellow-200 bg-black p-1 
                   px-3 text-xs sm:text-[14px] rounded-md rounded-tr-full shadow-white shadow-sm'>New Arrivals</h1>
+            <Link to={"/search?latest"}>
+            <h1 className='text-orange-200 cursor-pointer hover:underline'>See all</h1>
+          </Link>
                   </div>
                  
                   <Slider {...settings} className="mt-2 ring-yellow-200 ring-[0.4px] p-3 rounded-md cursor-pointer">
-                  {newArrivals.map((item) => (
-                    <div key={item.id} className='rounded-md p-[3px] shadow-black shadow-md my-2 h-full w-[150px] sm:w-[170px] flex-shrink-0'>
-                      <img src={item.img} alt={item.name} className="w-full rounded-md h-[180px] object-cover" />
+          {newArrivals.map((item) => (
+                         
+            <div
+            onClick={() => handleDivClick(item.id)}
+              key={item.id} className='rounded-md p-[5px] sm:p-[10px] shadow-black shadow-md my-2 h-full 
+                        w-[150px] overflow-hidden
+                     sm:w-[170px] '>
+                      <img src={item.img} alt={item.name} className="w-full rounded-md h-[180px] object-cover
+                       transition-transform duration-300 ease-in-out hover:scale-105" />
                       <p className='ml-2 mt-1 text-[13px] font-thin'>{item.name}</p>
                       <p className='ml-2 my-2 text-sm font-thin'>Ksh <span className='font-thin'>{item.price}</span></p>
                       <div className='flex flex-row-reverse'>
               
-                         <button className='text-orange-400 text-3xl mr-3 mb-1 rounded-full w-5'>+</button>
+                <button
+                   onClick={(e) => handleAddToCart(item, e)}
+                  className='text-orange-400 text-3xl mr-3 mb-1 rounded-full w-5'>+</button>
                      </div>
                     </div>
+                    
+                  
                   ))}
                 </Slider>
        
 
-                  {/* Category selection */}
-            <div className='w-full p-1 mt-4 sm:mt-[70px] flex justify-between'>
-              <h1 className='w-[50%] sm:w-[30%] text-yellow-200 bg-black p-1 px-3 text-xs sm:text-[14px] rounded-md rounded-tr-full shadow-white shadow-sm'>
+                  {/* Browse categories selection */}
+            <div className='w-full p-1 mt-4 sm:mt-[70px]  '>
+          <h1 className='w-[50%] sm:w-[30%] text-yellow-200 bg-black p-1 px-3 text-xs sm:text-[14px] rounded-md
+               rounded-tr-full shadow-white shadow-sm'>
                 Browse Categories
               </h1>
             </div>
-            <div className='w-full mt-2 bg-black p-1 sm:p-2 ring-yellow-200 ring-[0.4px] rounded-md'>
-        <div className='grid grid-cols-3 md:grid-cols-5 lg:grid-cols-6 gap-2'>
-          {Object.entries(categories).map(([key, category]) => (
-            <div key={key} className='bg-slate-900'>
-              <img src={category.img} alt={category.name} className='h-[170px] sm:h-[200px] w-full object-cover' />
-              <p className='ml-2 mb-1 p-1 capitalize'>{category.name}</p>
+            <div className=' mt-2  p-1 sm:p-3 ring-yellow-200 ring-[0.4px] rounded-md'>
+        <div className='grid grid-cols-3 md:grid-cols-5 lg:grid-cols-6 gap-2 sm:gap-3 overflow-hidden '>
+            {Object.entries(categories).map(([key, category]) => (
+              <Link to={`/search?category=${category.name}`}>
+               <div key={key} className=' overflow-hidden shadow-black shadow-md mb-2'>
+              <img src={category.img} alt={category.name} className='h-[170px] sm:h-[200px] w-full object-cover 
+              transition-transform duration-300 ease-in-out hover:scale-105
+              ' />
+              <p className='ml-2 mb-1 mt-1 sm:mt-2 p-1 text-xs font-thin sm:text-[14px]'>{category.name}</p>
             </div>
+            </Link>
+          
           ))}
         </div>
       </div>
@@ -261,12 +302,14 @@ const App = () => {
            <div className='w-full bg-slate-200 mt-2 flex flex-col gap-2 p-1 '>
           
           <div className='w-full flex gap-2'>
-            <div className='w-1/2 sm:w-[200px] bg-slate-900'>
-              <img src={menofficial} alt="" className='h-[190px] w-full sm:w-[200px] sm:h-[250px] object-cover' />
+            <div className='w-1/2 sm:w-[200px] bg-slate-900 overflow-hidden'>
+              <img src={menofficial} alt="" className='h-[190px] w-full sm:w-[200px] sm:h-[250px]
+               object-cover transition-transform duration-300 ease-in-out hover:scale-105' />
               <p className='ml-2 mt-1 mb-1 p-1 text-sm sm:text-md'>Casual Men</p>
             </div>
-            <div className='w-1/2 sm:w-[200px] bg-slate-900'>
-              <img src={womenofficial} alt="" className='h-[190px] w-full sm:w-[200px]  sm:h-[250px] object-cover' />
+            <div className='w-1/2 sm:w-[200px] bg-slate-900 overflow-hidden'>
+              <img src={womenofficial} alt="" className='h-[190px] w-full sm:w-[200px]  sm:h-[250px] 
+               object-cover transition-transform duration-300 ease-in-out hover:scale-105' />
               <p className='ml-2 mt-1 mb-1 p-1 text-sm sm:text-md'>Casual Women</p>
             </div>
             </div>
@@ -285,8 +328,9 @@ const App = () => {
       <div className='w-full mt-2  p-1 sm:p-2 ring-yellow-200 ring-[0.4px] rounded-md'>
         <div className='grid grid-cols-2 sm:grid-cols-5 gap-2'>
           {Object.entries(essentials).map(([key, item]) => (
-            <div key={item.id} className='shadow-black shadow-md hover:shadow-white my-1 mx-1 '>
-              <img src={item.img} alt={key} className='h-[170px] sm:h-[200px] w-full object-cover' />
+            <div key={item.id} className='shadow-black shadow-md hover:shadow-white my-1 mx-1 overflow-hidden '>
+              <img src={item.img} alt={key} className='h-[170px] sm:h-[200px] w-full object-cover
+               transition-transform duration-300 ease-in-out hover:scale-105' />
               <p className='ml-2 mb-1 p-1 capitalize'>{key}</p>
             </div>
           ))}

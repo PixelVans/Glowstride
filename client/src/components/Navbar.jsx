@@ -5,7 +5,7 @@ import { Link, useNavigate } from 'react-router-dom';
 
 function Navbar() {
   const categories = ["Men", "Women", "Kids", "Shoes", "Clothes", "Trending"];
- 
+  const cartItemCount = 9;
 
 
 
@@ -30,12 +30,21 @@ function Navbar() {
               placeholder='Search..' 
             /> 
           </form>
-          <div className='flex gap-6'>
-            <h1 className='text-white text-sm sm:text-[18px] hidden md:block'>Cart</h1>
-            <h1 className='text-white text-sm sm:text-[18px] block md:hidden hover:text-orange-300'>
-              <FaShoppingCart/>
-            </h1>
-            <h1 className='text-white hidden md:block'>Signin</h1>
+          <div className='flex gap-6 items-center'>
+          <Link to={"/cart"} className="relative">
+        <h1 className='text-white text-sm sm:text-[21px] hover:text-orange-300 flex items-center'>
+          <FaShoppingCart />
+          {cartItemCount > 0 && (
+            <span className='absolute -top-2 -right-3 bg-red-600 text-white text-xs rounded-full px-1 mt-1'>
+              {cartItemCount}
+            </span>
+          )}
+        </h1>
+      </Link>
+            <Link to={"/signin"}>
+              <h1 className='text-white hidden md:block'>Signin</h1>
+            </Link>
+            
             <h1 className='text-white block md:hidden hover:text-orange-300'>
               <FaUser/>
             </h1>

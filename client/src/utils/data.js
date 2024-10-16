@@ -227,3 +227,13 @@ export const newArrivals = [
   { id: 7, name: 'items4', img: disc1, price: 11  },
 ];
  
+
+export const cartItems = [
+  { id: 1, name: 'items1', img: disc1, price: 2, quantity: 3 },
+  { id: 2, name: 'items2', img: disc2, price: 12, quantity: 1 },
+  { id: 3, name: 'items3', img: disc3, price: 32, quantity: 5 },
+  { id: 4, name: 'items4', img: disc4, price: 12, quantity: 2 },
+  { id: 5, name: 'items5', img: disc3, price: 10, quantity: 4 },
+  { id: 6, name: 'items4', img: disc2, price: 15, quantity: 2 },
+  { id: 7, name: 'items4', img: disc1, price: 11, quantity: 1 },
+];
