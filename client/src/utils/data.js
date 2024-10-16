@@ -176,10 +176,10 @@ export const essentials = {
   };
   
 export const banners = [
-  { id: 1, name: 'items1', img: img1, price: 2 },
-  { id: 2, name: 'items2', img: img2, price: 12  },
-  { id: 3, name: 'items3', img: img3 , price: 32 },
-  { id: 4, name: 'items4', img: img4, price: 12  },
+  { id: 1, name: 'items1', img: img1, price: 200 },
+  { id: 2, name: 'items2', img: img2, price: 1200  },
+  { id: 3, name: 'items3', img: img3 , price: 3200 },
+  { id: 4, name: 'items4', img: img4, price: 1200  },
   
 ];
  export const recommended = [
@@ -198,33 +198,33 @@ export const banners = [
 ];
 
 export const discounted = [
-  { id: 1, name: 'items1', img: disc1, price: 2 },
-  { id: 2, name: 'items2', img: disc2, price: 12  },
-  { id: 3, name: 'items3', img: disc3 , price: 32 },
-  { id: 4, name: 'items4', img: disc4, price: 12  },
-  { id: 5, name: 'items5', img: disc3, price: 10  },
-  { id: 6, name: 'items4', img: disc2, price: 15  },
-  { id: 7, name: 'items4', img: disc1, price: 11  },
+  { id: 1, name: 'items1', img: disc1, price: 2000 },
+  { id: 2, name: 'items2', img: disc2, price: 1200  },
+  { id: 3, name: 'items3', img: disc3 , price: 3200 },
+  { id: 4, name: 'items4', img: disc4, price: 1200  },
+  { id: 5, name: 'items5', img: disc3, price: 1000 },
+  { id: 6, name: 'items4', img: disc2, price: 1500  },
+  { id: 7, name: 'items4', img: disc1, price: 1100  },
 ];
 export const brands = [
   { id: 1, name: 'vans', img: vans, price: 2 },
-  { id: 2, name: 'adidas', img: adiddas, price: 12  },
-  { id: 3, name: 'jordan', img: jordan , price: 32 },
-  { id: 4, name: 'gucci', img: gucci, price: 12  },
-  { id: 5, name: 'nike', img: nike, price: 10  },
-  { id: 6, name: 'nike', img: disc2, price: 15  },
-  { id: 7, name: 'timber', img: disc1, price: 11 },
-  { id: 8, name: 'adidas', img: adiddas, price: 102 },
-  { id: 9, name: 'adidas', img: adiddas, price: 112  },
+  { id: 2, name: 'adidas', img: adiddas, price: 1200  },
+  { id: 3, name: 'jordan', img: jordan , price: 3200 },
+  { id: 4, name: 'gucci', img: gucci, price: 1200  },
+  { id: 5, name: 'nike', img: nike, price: 1000  },
+  { id: 6, name: 'nike', img: disc2, price: 1500  },
+  { id: 7, name: 'timber', img: disc1, price: 1100 },
+  { id: 8, name: 'adidas', img: adiddas, price: 10200 },
+  { id: 9, name: 'adidas', img: adiddas, price: 11200  },
 ];
 export const newArrivals = [
-  { id: 1, name: 'items1', img: arrival1, price: 2 },
-  { id: 2, name: 'items2', img: arrival2, price: 12  },
-  { id: 3, name: 'items3', img: arrival3 , price: 32 },
-  { id: 4, name: 'items4', img: arrival4, price: 12  },
-  { id: 5, name: 'items5', img: disc3, price: 10  },
-  { id: 6, name: 'items4', img: disc2, price: 15  },
-  { id: 7, name: 'items4', img: disc1, price: 11  },
+  { id: 1, name: 'items1', img: arrival1, price: 200 },
+  { id: 2, name: 'items2', img: arrival2, price: 1200  },
+  { id: 3, name: 'items3', img: arrival3 , price: 3200 },
+  { id: 4, name: 'items4', img: arrival4, price: 1200  },
+  { id: 5, name: 'items5', img: disc3, price: 1000  },
+  { id: 6, name: 'items4', img: disc2, price: 1500  },
+  { id: 7, name: 'items4', img: disc1, price: 1100  },
 ];
  
 

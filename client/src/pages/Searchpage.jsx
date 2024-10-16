@@ -1,11 +1,19 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { PriceSlider } from '../components/RangeSlide';  // Import the PriceSlider component
 import { recommended } from '../utils/data';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 
 
 
 export const Searchpage = () => {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+
   const [minPrice, setMinPrice] = useState(100); // Starting minimum price
   const [maxPrice, setMaxPrice] = useState(20000); // Starting maximum price
   const minRange = 67; // Define the minimum range
@@ -19,7 +27,19 @@ export const Searchpage = () => {
     const value = Math.min(event.target.value, maxPrice);
     setMinPrice(value);
   };
+  
 
+    //add to cart logic
+    const handleAddToCart = (item, e) => {
+      e.stopPropagation(); // Prevent the div click from firing
+      addToCart(item); // Call the addToCart function with the item
+  };
+  //view item logic
+  const navigate = useNavigate();
+  const handleDivClick = (id) => {
+    navigate(`/post/${id}`);
+  };
+  
   const handleMaxChange = (event) => {
     const value = Math.max(event.target.value, minPrice);
     setMaxPrice(value);
@@ -84,13 +104,17 @@ export const Searchpage = () => {
         <div className='flex  '>
             <div className='lg:mx-auto lg:p-5 md:p-1 flex flex-wrap '>
             {searchResults.map((item) => (
-          <div key={item.id} className='rounded-md p-[3px] mb-5 shadow-black shadow-md  mx-auto w-1/2 sm:w-[170px] '>
+              <div
+              onClick={() => handleDivClick(item.id)}
+                key={item.id} className='rounded-md p-[3px] mb-5 shadow-black shadow-md  mx-auto w-1/2 sm:w-[170px] '>
             <img src={item.img} alt={item.name} className="w-full rounded-md h-[180px] object-cover" />
             <p className='ml-2 mt-1 text-[13px] font-thin text-white'>{item.name}</p>
             <p className='ml-2 my-2 text-sm font-thin text-white'>Ksh <span className='font-thin'>{item.price.toLocaleString()}</span></p>
             <div className='flex flex-row-reverse'>
               
-              <button className='text-orange-400 text-3xl mr-3 mb-1 rounded-full w-5'>+</button>
+                  <button
+                    onClick={(e) => handleAddToCart(item, e)}
+                    className='text-orange-400 text-3xl mr-3 mb-1 rounded-full w-5'>+</button>
             </div>
           </div>
         ))}

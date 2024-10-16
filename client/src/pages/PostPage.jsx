@@ -1,11 +1,18 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import { recommended } from '../utils/data';
 import Slider from 'react-slick';
 import { settings } from '../utils/slidersettings';
+import { useLocation } from 'react-router-dom';
 
 const PostPage = () => {
+
+    const { pathname } = useLocation();
+
+    useEffect(() => {
+      window.scrollTo(0, 0);
+    }, [pathname]);
   // Sample product data
   const product = {
     size: { min: 36, max: 40 },
@@ -50,8 +57,8 @@ const PostPage = () => {
 
     return (
       <>
-    <div className=" mx-auto w-full sm:max-w-7xl p-4 mt-2 sm:mt-5">
-      <div className='grid grid-cols-1 sm:grid-cols-3 gap-4'>
+    <div className=" mx-auto w-full  sm:max-w-7xl p-4 mt-2 sm:mt-5">
+      <div className='grid grid-cols-1 sm:grid-cols-3 gap-4 '>
         {/* Image column */}
         <div className=''>
           <Swiper
@@ -118,7 +125,7 @@ const PostPage = () => {
                     </div>
                     {/* Customer Reviews */}
                     <div className='mt-6'>
-                    <h2 className="text-lg sm:text-2xl font-bold mb-4 text-orange-700">Customer Reviews</h2>
+                    <h2 className="text-lg sm:text-2xl font-bold mb-4 text-orange-600">Customer Reviews</h2>
                     {product.reviews.length > 0 ? (
                         <div className="h-[300px] overflow-y-auto space-y-4"> {/* Set fixed height and overflow */}
                         {product.reviews.map(review => (

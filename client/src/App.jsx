@@ -12,10 +12,18 @@ import {
   recommended, shoes, womenofficial, womenwear
 } from './utils/data';
 import { settings } from './utils/slidersettings';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 
     
 const App = () => {
+
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+
   const navigate = useNavigate();
 
   const handleDivClick = (id) => {
@@ -193,7 +201,8 @@ const App = () => {
             <img src={item.img} alt={item.name} className="w-full rounded-md  h-[180px] object-cover
              transition-transform duration-300 ease-in-out hover:scale-105" />
             <p className='ml-2 mt-1 text-[13px] font-thin'>{item.name}</p>
-            <p className='ml-2 my-2 text-sm font-thin'>Ksh <span className='font-thin'>{item.price}</span></p>
+            <p className='ml-2  text-xs font-extralight line-through text-slate-300'>Ksh <span className='font-thin'>{item.price}</span></p>
+            <p className='ml-2 my-2 text-sm font-thin'>Ksh <span className='font-thin'>{(item.price)-100}</span></p>
             <div className='flex flex-row-reverse'>
               
               <button
