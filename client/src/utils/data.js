@@ -49,7 +49,7 @@ export  const adiddas = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR
  
 
   export   const menofficial = "https://png.pngtree.com/png-vector/20240616/ourmid/pngtree-success-matches-perfectly-with-a-stylish-suit-png-image_12727721.png"
-  export  const womenofficial = "https://t4.ftcdn.net/jpg/00/29/59/47/360_F_29594789_gruUqSPmfKUchKUkWumMYE1bXdfxN6Kt.jpg"
+  export  const womenofficial = "https://i.pinimg.com/236x/3d/19/6b/3d196bf3459012635fb20af09040587a.jpg"
 
 
 export const categories = {

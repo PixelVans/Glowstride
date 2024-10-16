@@ -297,9 +297,10 @@ const App = () => {
          {/* official wear */}
          <div
          className='w-full p-1 mt-4 sm:mt-[70px]  flex justify-between'
-        > <h1 className='w-[50%] sm:w-[30%] text-yellow-200 bg-black p-1 px-3 text-xs sm:text-[14px] rounded-md rounded-tr-full shadow-white shadow-sm'>Official wear</h1>
+        > <h1 className='w-[50%] sm:w-[30%] text-yellow-200 bg-black p-1 px-3 text-xs sm:text-[14px] 
+        rounded-md rounded-tr-full shadow-white shadow-sm'>Official wear</h1>
         </div>
-           <div className='w-full bg-slate-200 mt-2 flex flex-col gap-2 p-1 '>
+           <div className='w-full bg-slate-700 mt-2 flex flex-col gap-2 p-1 '>
           
           <div className='w-full flex gap-2'>
             <div className='w-1/2 sm:w-[200px] bg-slate-900 overflow-hidden'>
