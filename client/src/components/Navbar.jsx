@@ -1,12 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FaShoppingCart } from 'react-icons/fa';
-import { FaUser } from 'react-icons/fa';
+import { FaUser, FaSearch } from 'react-icons/fa';
 import { Link, useNavigate } from 'react-router-dom';
 
 function Navbar() {
   const categories = ["Men", "Women", "Kids", "Shoes", "Clothes", "Trending"];
   const cartItemCount = 9;
-
+  const [searchVal, setSearchVal] = useState('');
 
 
   return (
@@ -22,13 +22,19 @@ function Navbar() {
            <h1 className='text-white'>Glowstride</h1> 
           </Link>
           
-          <form className='w-[300px] mt-1 hidden md:flex'>
+          <form className='w-[340px] mt-1 p-[2px] rounded-lg hidden md:flex bg-slate-700 items-center'>
             <input
               id='search'
-              className='p-[2px] pl-5 w-full rounded'
+              className='w-full px-4 py-[3px] bg-gray-100 text-black border border-gray-600 rounded-md focus:outline-none focus:border-orange-500'
               type="text" 
               placeholder='Search..' 
+              value={searchVal}
+              onChange={(e) => setSearchVal(e.target.value)}
             /> 
+            <Link to={`/search?q=${searchVal}`} className='px-2 text-white hover:text-orange-400'>
+              <FaSearch/> 
+            </Link>
+           
           </form>
           <div className='flex gap-6 items-center'>
           <Link to={"/cart"} className="relative">
@@ -51,13 +57,20 @@ function Navbar() {
           </div>
         </div>
         
-        <form className='w-full mt-1 md:hidden flex'>
-          <input
-            className='p-[2px] pl-5 w-full rounded'
-            type="text" 
-            placeholder='Search..' 
-          /> 
-        </form>
+        <form className='mx-2 mt-1 p-[2px] rounded-lg flex md:hidden bg-slate-700 items-center'>
+            <input
+              id='search'
+              className='w-full px-4 py-[3px] bg-gray-100 text-black border border-gray-600 rounded-md focus:outline-none focus:border-orange-500'
+             type="text" 
+             value={searchVal}
+              onChange={(e) => setSearchVal(e.target.value)}
+              placeholder='Search..' 
+            /> 
+              <Link to={`/search?q=${searchVal}`}className='px-2 text-white hover:text-orange-400'>
+              <FaSearch/> 
+            </Link>
+           
+          </form>
               
         {/* Category Section with Horizontal Scroll and Hidden Scrollbar */}
         <div className='flex gap-3 p-2 w-full pb-2 mx-auto items-center'>
