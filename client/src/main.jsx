@@ -17,6 +17,11 @@ import SignUpPage from './pages/SignUpPage.jsx';
 import ResetPassWord from './pages/ResetPassWord.jsx';
 import CartPage from './pages/CartPage.jsx';
 import CheckoutPage from './pages/CheckoutPage.jsx';
+import AdminPage from './pages/AdminPage.jsx';
+import OrdersPage from './pages/OrdersPage.jsx';
+import AddItem from './pages/AddItem.jsx';
+import ManageProductsPage from './pages/ManageProductsPage.jsx';
+import CustomersPage from './pages/CustomersPage.jsx';
 
 const ConditionalFooter = () => {
   const location = useLocation();
@@ -41,6 +46,12 @@ root.render(
         <Route path="/reset" element={<ResetPassWord />} />
         <Route path="/cart" element={<CartPage />} />
         <Route path="/checkout" element={<CheckoutPage />} />
+        <Route path="/admin" element={<AdminPage />} />
+        <Route path="/orders" element={<OrdersPage />} />
+        <Route path="/add-product" element={<AddItem />} />
+        <Route path="/manage-products" element={<ManageProductsPage />} />
+        <Route path="/customers" element={<CustomersPage />} />
+       
       </Routes>
       <ConditionalFooter />
     </Router>

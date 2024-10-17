@@ -9,6 +9,22 @@ const im2=  "https://i.pinimg.com/736x/f9/77/a2/f977a2f73b5b2df72ff900ab505834ee
 const im3 = "https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/57/587884/1.jpg?2392"
 const im4 = "https://s.alicdn.com/@sc04/kf/H1d60d853aa564b1b879c42ade3d1edbf8.jpg_300x300.jpg"
 const im5 = "https://i.ebayimg.com/images/g/CdwAAOSwxaNlacX7/s-l1200.jpg"
+const im50 = "https://veirdo.in/cdn/shop/files/Artboard8.png?v=1724158576"
+const im8 = "https://m.media-amazon.com/images/I/51AWKhIKDSL.jpg"
+const im51 = "https://cdn.runrepeat.com/storage/gallery/product_content/30973/nike-air-max-97-side-profile-15476107-main.jpg"
+const im52 = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbd67EP5bgH0hurNQ52Du3uNeXYJmxtAMn_A&s"
+const im53 = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnwADFUw167LbS17IpZqjPg3jWtyHt66x1kw&s"
+const im54 = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQY1YdpzlzApKDH-l6ynGxFJU5zSRkD8vHWFQ&s"
+const im55 = "https://www.windsorsmith.com.au/media/catalog/product/d/i/dizzy_black_1.jpg?optimize=high&fit=bounds&height=650&width=650&canvas=650:650"
+
+const im11 = "https://www.lestyleparfait.co.ke/cdn/shop/files/womens-t-shirts-striped-crop-tshirt-lestyleparfait-kenya-women-tops-2.jpg?v=1703679307"
+const im12 = "https://images-cdn.ubuy.co.in/661fbc1f3d4d0677624eaeba-dresstells-skirt-for-women-mini-skater.jpg"
+const im13 = "https://i.etsystatic.com/25357925/r/il/28e49a/2610035353/il_570xN.2610035353_oqhq.jpg"
+const im14 = "https://ae01.alicdn.com/kf/Sd4e9a1f502b14062a96ff2bb9284b0f8J/2024-Autumn-New-Fish-Mouth-High-Heels-Slim-Heels-Shallow-Mouth-Water-Diamond-Pearl-Women-s.jpg"
+const im9 = "https://www.lestyleparfait.co.ke/cdn/shop/files/women-s-denim-jeans-high-waist-straight-leg-lestyleparfait-kenya-women-jeans-12.jpg?v=1703684710"
+const im10 = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6MlaSOMRVdTV-kGPkFP2rYs45hL-wEgYddg&s"
+const im7 = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQ1WgOcp_QupGcpaRDjvbGvSPGqSEcm9sJ_w&s"
+const im6 = "https://images.unsplash.com/photo-1542291026-7eec264c27ff?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c2hvZXN8ZW58MHx8MHx8fDA%3D"
 
 const disc1 ='https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/57/587884/1.jpg?2392';
 const disc2=  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROZK23rCFnqYwCsWV7zzBAac5YFKSR-J9CGg&s"
@@ -172,6 +188,10 @@ export const essentials = {
     stockings: {
       id: 10,
       img: "https://i5.walmartimages.com/asr/bfe49d2a-b9f2-4859-a4a5-a750ac5f08a3.050c96c7ca8fe1a0e9e57fe7904d1ada.jpeg"
+    },
+    other: {
+      id: 10,
+      img: "https://c8.alamy.com/comp/GRBF8N/3d-small-people-lock-and-key-GRBF8N.jpg"
     }
   };
   
@@ -196,6 +216,35 @@ export const banners = [
   { id: 27, name: 'items4', img: im4, price: 1100  },
   { id: 47, name: 'items4', img: im4, price: 3100  },
 ];
+export const searchResults = [
+  { id: 1, name: 'items1', img: im1, price: 2000 },
+  { id: 2, name: 'items2', img: im2, price: 1200  },
+  { id: 3, name: 'items3', img: im3 , price: 3200 },
+  { id: 13, name: 'items3', img: im3 , price: 3200 },
+  { id: 4, name: 'items4', img: im5, price: 1200  },
+  { id: 5, name: 'items5', img: im4, price: 1900  },
+  { id: 16, name: 'items6', img: im10, price: 1500  },
+  { id: 6, name: 'items6', img: im4, price: 1500  },
+  { id: 7, name: 'items7', img: im12, price: 1100  },
+  { id: 38, name: 'items78', img: im11, price: 1400  },
+  { id: 18, name: 'items18', img: im7, price: 1400  },
+  { id: 28, name: 'items28', img: im1, price: 1700  },
+  { id: 428, name: 'items8', img: im8, price: 1400  },
+  { id: 39, name: 'items9', img: im6, price: 1700  },
+  { id: 17, name: 'items10', img: im13, price: 2100  },
+  { id: 27, name: 'items11', img: im9, price: 1100  },
+  { id: 417, name: 'items12', img: im6, price: 3100  },
+  { id: 47, name: 'items12', img: im14, price: 300  },
+  { id: 48, name: 'items13', img: im11, price: 3100  },
+  { id: 49, name: 'items14', img: im12, price: 3200  },
+  { id: 419, name: 'items124', img: im2, price: 3100  },
+  { id: 50, name: 'items1k15', img: im50, price: 3000  },
+  { id: 51, name: 'items1h15', img: im51, price: 3000  },
+  { id: 52, name: 'items11ah5', img: im52, price: 3000  },
+  { id: 53, name: 'items1g15', img: im53, price: 3000  },
+  { id: 54, name: 'items1d15', img: im54, price: 3000  },
+  { id: 55, name: 'items1d1y5', img: im55, price: 3000  },
+];
 
 export const discounted = [
   { id: 1, name: 'items1', img: disc1, price: 2000 },
@@ -206,6 +255,9 @@ export const discounted = [
   { id: 6, name: 'items4', img: disc2, price: 1500  },
   { id: 7, name: 'items4', img: disc1, price: 1100  },
 ];
+export const brandss = ['vans','adidas','jordan',]
+
+
 export const brands = [
   { id: 1, name: 'vans', img: vans, price: 2 },
   { id: 2, name: 'adidas', img: adiddas, price: 1200  },

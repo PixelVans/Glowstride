@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { PriceSlider } from '../components/RangeSlide';  // Import the PriceSlider component
-import { recommended } from '../utils/data';
+import { searchResults } from '../utils/data';
 import { useLocation, useNavigate } from 'react-router-dom';
 
 
@@ -20,7 +20,7 @@ export const Searchpage = () => {
   const maxRange = 20000; // Define the maximum range
 
   // to fetch search results from the database
-  const searchResults = recommended;
+
 
 
   const handleMinChange = (event) => {
@@ -47,7 +47,7 @@ export const Searchpage = () => {
 
   return (
     <> 
-    <div className='flex flex-col min-h-screen sm:flex-row'>
+    <div className='flex flex-col h-full  sm:flex-row'>
         {/* sort categories */}
         
       <div className='w-full md:w-2/6 lg:w-1/6 p-2 sm:p-5 shadow-sm shadow-slate-600 hidden sm:block'>
@@ -122,7 +122,7 @@ export const Searchpage = () => {
           </div>
             
           {/* pagination */}
-          <div className='flex items-center text-center  gap-6 mt-5 justify-center'>
+          <div className='flex items-center text-center  gap-6 mt-9 mb-5 justify-center'>
 
             <button className='text-white text-center mx-3'>Prev</button>
             <button className='text-white text-center'>1</button>

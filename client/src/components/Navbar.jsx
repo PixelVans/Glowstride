@@ -10,7 +10,7 @@ function Navbar() {
 
 
   return (
-    <div className='bg-slate-950 w-full'>
+    <div className='bg-slate-950 w-full '>
       <div className='sm:mx-[30px] mx-[10px]'>
         <div className='flex justify-between w-full p-2'>
           <div className='text-white block md:hidden mt-2'>
@@ -45,9 +45,9 @@ function Navbar() {
               <h1 className='text-white hidden md:block'>Signin</h1>
             </Link>
             
-            <h1 className='text-white block md:hidden hover:text-orange-300'>
+            <Link to={"/admin"} className='text-white block  hover:text-orange-300'>
               <FaUser/>
-            </h1>
+            </Link>
           </div>
         </div>
         
@@ -63,9 +63,11 @@ function Navbar() {
         <div className='flex gap-3 p-2 w-full pb-2 mx-auto items-center'>
     <div className='flex mx-auto gap-6 overflow-x-auto whitespace-nowrap scrollbar-hide'>
             {categories.map((category, index) => (
-         <Link to={`/search?category=${category}`}>
+              <Link
+               key={index} 
+                to={`/search?category=${category}`}>
         <div
-          key={index}
+          
           className='text-white border-b-[3px] pb-2 border-transparent hover:border-orange-400 px-4 cursor-pointer'
         >
           {category}
@@ -75,6 +77,7 @@ function Navbar() {
     </div>
   </div>
       </div>
+     
     </div>
   )
 }
