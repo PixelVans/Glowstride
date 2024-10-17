@@ -1,12 +1,13 @@
-import React, { useEffect } from 'react';
-import { PriceSlider } from '../components/RangeSlide';  // Import the PriceSlider component
+import React, { useEffect, useState } from 'react';
+import { AiOutlineClose } from 'react-icons/ai';
 import { searchResults } from '../utils/data';
 import { useLocation, useNavigate } from 'react-router-dom';
 import FilterSearchResults from '../components/FilterSearchResults';
 
 export const Searchpage = () => {
   const { pathname } = useLocation();
-
+  const [filterPopup, setfilterPopup] = useState(false)
+  
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [pathname]);
@@ -25,25 +26,33 @@ export const Searchpage = () => {
 
   return (
     <> 
-    <div className='flex flex-col h-full relative sm:flex-row'>
+    <div className='flex flex-col h-full mx-2 relative md:flex-row'>
         {/* Filter for desktop */}
-      <div className='w-full md:w-2/6 lg:w-1/6 p-2 sm:p-5 shadow-sm shadow-slate-600 hidden sm:block'>
+      <div className='w-full md:w-2/6 lg:w-1/6 p-2 sm:p-5 shadow-sm shadow-slate-600 hidden md:block'>
          <FilterSearchResults />
               <div className='h-9'></div>
         </div> 
 
- {/* Filter search results for mobile phones */}
-<div className='fixed inset-0 z-50 hidden'>
-  {/* Blurred background covering the component area */}
-  <div className='absolute inset-0 bg-black bg-opacity-50 backdrop-blur-lg'></div>
+        
 
-  {/* Centered FilterSearchResults box with margins */}
-  <div className='relative flex items-center justify-center h-full'>
-    <div className='w-11/12 max-w-sm p-4 bg-black bg-opacity-90 rounded-lg shadow-lg '>
-      <FilterSearchResults />
-    </div>
-  </div>
-</div>
+          {/* Filter search results for mobile phones */}
+          {filterPopup && (
+              <div className='md:hidden my-5 mx-5 shadow-bott p-2'>
+                  
+                   <div className='flex justify-end mr-4'>
+                    <button
+                      onClick={()=> setfilterPopup(false)}
+                     className='text-2xl flex-end text-white cursor-pointer'><AiOutlineClose/></button> 
+              </div>
+             {/* header */}
+                <FilterSearchResults/>
+                          
+                              
+            <div className='h-7 bg-slate-200 mt-2'>
+              
+                </div>
+              </div>
+        )}  
 
 
         
@@ -51,7 +60,8 @@ export const Searchpage = () => {
         <div className='w-full lg:w-5/6 md:w-4/6 items-center'>
           <div className='flex justify-between'>
             <h1 className='ml-5 my-2 text-white text-xs font-thin'>Found 1200 results</h1>
-            <button className='text-orange-300 mr-4 flex sm:hidden hover:underline'>Filter results</button>
+            <button onClick={() => setfilterPopup(!filterPopup)}
+              className='text-orange-300 mr-4 flex md:hidden hover:underline'>Filter results</button>
           </div>
 
         <div className='flex'>
@@ -60,7 +70,7 @@ export const Searchpage = () => {
               <div
               onClick={() => handleDivClick(item.id)}
                 key={item.id} className='rounded-md p-[3px] mb-5 shadow-black shadow-md mx-auto w-1/2 sm:w-[170px]'>
-                <img src={item.img} alt={item.name} className="w-full rounded-md h-[180px] object-cover" />
+                <img src={item.img} alt={item.name} className="w-full rounded-md h-[190px] sm:h-[200px]  object-cover" />
                 <p className='ml-2 mt-1 text-[13px] font-thin text-white'>{item.name}</p>
                 <p className='ml-2 my-2 text-sm font-thin text-white'>Ksh <span className='font-thin'>{item.price.toLocaleString()}</span></p>
                 <div className='flex flex-row-reverse'>

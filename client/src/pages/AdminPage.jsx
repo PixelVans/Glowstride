@@ -23,9 +23,11 @@ const AdminPage = () => {
 
   return (
     <div className="flex min-h-screen bg-gray-100">
+
+
       {/* Left Control Panel */}
-      <div className="w-1/5 bg-gray-900 text-white p-6 space-y-6">
-        <h2 className="text-xl font-bold mb-4">Admin Panel</h2>
+      <div className="w-1/5 bg-gray-900 text-white p-6 space-y-6 hidden md:flex flex-col">
+        <h2 className="text-xl font-bold mb-4 ">Admin Panel</h2>
         <div className="flex flex-col gap-2">
                   <button className="w-full bg-slate-800 py-2 px-4 rounded-md hover:bg-blue-600">Dashboard</button>
                   <Link to={"/add-product"}>
@@ -45,9 +47,12 @@ const AdminPage = () => {
         </div>
       </div>
 
+      
+
+
       {/* Main Content */}
-      <div className="flex-1 p-6">
-        <h1 className="text-2xl font-bold text-gray-800 mb-8">Admin Dashboard</h1>
+      <div className="flex-1  p-6">
+        <h1 className="text-xl sm:text-2xl font-bold text-gray-800 md:mb-8 mb-5 justify-center mx-auto items-center ">Admin Dashboard</h1>
 
         {/* Stats Overview */}
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-8">
@@ -66,11 +71,12 @@ const AdminPage = () => {
         </div>
 
         {/* Charts: Bar Chart and Pie Chart in Two Columns */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-6">
           {/* Income Bar Chart */}
           <div className="bg-white shadow-md p-6 rounded-md">
             <h2 className="text-lg font-semibold mb-4">Monthly Income</h2>
-            <ResponsiveContainer width="100%" height={300}>
+            <div className='h-[200px] sm:h-[300px] '>
+               <ResponsiveContainer width="100%" >
               <BarChart data={salesData}>
                 <CartesianGrid stroke="#ccc" />
                 <XAxis dataKey="name" />
@@ -79,6 +85,8 @@ const AdminPage = () => {
                 <Bar dataKey="income" fill="#8884d8" />
               </BarChart>
             </ResponsiveContainer>
+            </div>
+           
           </div>
 
           {/* Gender Distribution Pie Chart */}
