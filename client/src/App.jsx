@@ -107,8 +107,8 @@ const App = () => {
           className="w-full h-full object-cover transition-transform duration-300 ease-in-out hover:scale-105"
         />
       </div>
-      <p className='ml-2 mt-1 text-[13px] font-thin'>{item.name}</p>
-      <p className='ml-2 my-2 text-sm '>Ksh <span className='font-thin'>{item.price.toLocaleString()}</span></p>
+      <p className='ml-2 mt-1 text-[13px] '>{item.name}</p>
+      <p className='ml-2 my-2 text-sm '>Ksh <span className=''>{item.price.toLocaleString()}</span></p>
       <div className='flex flex-row-reverse'>
         <button
           onClick={(e) => handleAddToCart(item, e)}
@@ -200,9 +200,9 @@ const App = () => {
             h-full w-[150px] sm:w-[170px] flex-shrink-0'>
             <img src={item.img} alt={item.name} className="w-full rounded-md  h-[180px] object-cover
              transition-transform duration-300 ease-in-out hover:scale-105" />
-            <p className='ml-2 mt-1 text-[13px] font-thin'>{item.name}</p>
-            <p className='ml-2  text-xs font-extralight line-through text-slate-300'>Ksh <span className='font-thin'>{item.price}</span></p>
-            <p className='ml-2 my-2 text-sm '>Ksh <span className='font-thin'>{(item.price)-100}</span></p>
+            <p className='ml-2 mt-1 text-[13px] '>{item.name}</p>
+            <p className='ml-2  text-xs font-thin line-through text-slate-100'>Ksh <span className='font-thin'>{item.price}</span></p>
+            <p className='ml-2 my-2 text-sm '>Ksh <span className=''>{(item.price)-100}</span></p>
             <div className='flex flex-row-reverse'>
               
               <button
@@ -248,7 +248,7 @@ const App = () => {
                 > <h1 className='w-[50%] sm:w-[30%] text-yellow-200 bg-black p-1 
                   px-3 text-xs sm:text-[14px] rounded-md rounded-tr-full shadow-white shadow-sm'>New Arrivals</h1>
             <Link to={"/search?latest"}>
-            <h1 className='text-orange-200 cursor-pointer hover:underline'>See all</h1>
+            <h1 className='text-orange-200 cursor-pointer hover:underline mr-2'>See all</h1>
           </Link>
                   </div>
                  
@@ -262,8 +262,8 @@ const App = () => {
                      sm:w-[170px] '>
                       <img src={item.img} alt={item.name} className="w-full rounded-md h-[180px] object-cover
                        transition-transform duration-300 ease-in-out hover:scale-105" />
-                      <p className='ml-2 mt-1 text-[13px] font-thin'>{item.name}</p>
-                      <p className='ml-2 my-2 text-sm font-thin'>Ksh <span className='font-thin'>{item.price}</span></p>
+                      <p className='ml-2 mt-1 text-[13px] '>{item.name}</p>
+                      <p className='ml-2 my-2 text-sm '>Ksh <span className='font'>{item.price}</span></p>
                       <div className='flex flex-row-reverse'>
               
                 <button
@@ -292,7 +292,7 @@ const App = () => {
               <img src={category.img} alt={category.name} className='h-[170px] sm:h-[200px] w-full object-cover 
               transition-transform duration-300 ease-in-out hover:scale-105
               ' />
-              <p className='ml-2 mb-1 mt-1 sm:mt-2 p-1 text-xs font-thin sm:text-[14px]'>{category.name}</p>
+              <p className='ml-2 mb-1 mt-1 sm:mt-2 p-1 text-xs  sm:text-[14px]'>{category.name}</p>
             </div>
             </Link>
           

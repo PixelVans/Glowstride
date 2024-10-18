@@ -59,7 +59,7 @@ export const Searchpage = () => {
         {/* Results area */}
         <div className='w-full lg:w-5/6 md:w-4/6 items-center'>
           <div className='flex justify-between'>
-            <h1 className='ml-5 my-2 text-white text-xs font-thin'>Found 1200 results</h1>
+            <h1 className='ml-5 my-2 text-white text-xs '>Found 1200 results</h1>
             <button onClick={() => setfilterPopup(!filterPopup)}
               className='text-orange-300 mr-4 flex md:hidden hover:underline'>Filter results</button>
           </div>
@@ -71,8 +71,8 @@ export const Searchpage = () => {
               onClick={() => handleDivClick(item.id)}
                 key={item.id} className='rounded-md p-[3px] mb-5 shadow-black shadow-md mx-auto w-1/2 sm:w-[170px]'>
                 <img src={item.img} alt={item.name} className="w-full rounded-md h-[190px] sm:h-[200px]  object-cover" />
-                <p className='ml-2 mt-1 text-[13px] font-thin text-white'>{item.name}</p>
-                <p className='ml-2 my-2 text-sm  text-white'>Ksh <span className='font-thin'>{item.price.toLocaleString()}</span></p>
+                <p className='ml-2 mt-1 text-[13px]  text-white'>{item.name}</p>
+                <p className='ml-2 my-2 text-sm  text-white'>Ksh <span className=''>{item.price.toLocaleString()}</span></p>
                 <div className='flex flex-row-reverse'>
                   <button
                     onClick={(e) => handleAddToCart(item, e)}
