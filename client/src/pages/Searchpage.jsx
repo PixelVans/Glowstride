@@ -26,7 +26,7 @@ export const Searchpage = () => {
 
   return (
     <> 
-    <div className='flex flex-col h-full mx-2 relative md:flex-row'>
+    <div className='flex flex-col h-full mx-2 mt-1 relative md:flex-row'>
         {/* Filter for desktop */}
       <div className='w-full md:w-2/6 lg:w-1/6 p-2 sm:p-5 shadow-sm shadow-slate-600 hidden md:block'>
          <FilterSearchResults />

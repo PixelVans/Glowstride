@@ -24,13 +24,13 @@ const FilterSearchResults = () => {
   return (
     <div className='w-full flex flex-col gap-2'>
     <h1 className='text-yellow-300 font-thin mt-5 text-center'>Category</h1> <hr />
-      <div className='text-white font-thin p-2 sm:p-2 rounded-md hover:bg-orange-700'>Kids</div>
-      <div className='text-white font-thin p-2 sm:p-2 rounded-md hover:bg-orange-700'>Men</div>
-      <div className='text-white font-thin p-2 sm:p-2 rounded-md hover:bg-orange-700'>Women</div>
-      <div className='text-white font-thin p-2 sm:p-2 rounded-md hover:bg-orange-700'>Footwear</div>
+      <div className='text-white font-semibold sm:font-normal p-2 sm:p-2 rounded-md hover:bg-orange-700'>Kids</div>
+      <div className='text-white font-semibold sm:font-normal p-2 sm:p-2 rounded-md hover:bg-orange-700'>Men</div>
+      <div className='text-white font-semibold sm:font-normal p-2 sm:p-2 rounded-md hover:bg-orange-700'>Women</div>
+      <div className='text-white font-semibold sm:font-normal p-2 sm:p-2 rounded-md hover:bg-orange-700'>Footwear</div>
       <div className='text-white p-2 sm:p-2 rounded-md hover:bg-orange-700'>Clothing</div>
               <div className='flex justify-between'>
-                  <h1 className='text-white font-semibold mt-2 text-center'>Price</h1>  
+                  <h1 className='text-white font-bold mt-2 text-center'>Price</h1>  
                   <button className='hover:bg-white hover:text-black px-4 rounded-md text-orange-400 text-sm'>Apply</button>      
          </div>
       
@@ -54,12 +54,12 @@ const FilterSearchResults = () => {
               </div>
              
               <h1 className='text-yellow-300 font-thin mt-5 text-center'>Popular Brands</h1> <hr />
-      <div className='text-white p-2 font-thin sm:p-2 rounded-md hover:bg-orange-700'>Nike</div>
-      <div className='text-white p-2 font-thin sm:p-2 rounded-md hover:bg-orange-700'>Jordan</div>
-      <div className='text-white p-2 font-thin sm:p-2 rounded-md hover:bg-orange-700'>Vans</div>
-      <div className='text-white p-2 font-thin sm:p-2 rounded-md hover:bg-orange-700'>Adidas</div>
-      <div className='text-white p-2 font-thin sm:p-2 rounded-md hover:bg-orange-700'>Puma</div>
-      <div className='text-white p-2 font-thin sm:p-2 rounded-md hover:bg-orange-700'>Converse</div>
+      <div className='text-white p-2 font-semibold sm:font-normal sm:p-2 rounded-md hover:bg-orange-700'>Nike</div>
+      <div className='text-white p-2 font-semibold sm:font-normal sm:p-2 rounded-md hover:bg-orange-700'>Jordan</div>
+      <div className='text-white p-2 font-semibold sm:font-normal sm:p-2 rounded-md hover:bg-orange-700'>Vans</div>
+      <div className='text-white p-2 font-semibold sm:font-normal sm:p-2 rounded-md hover:bg-orange-700'>Adidas</div>
+      <div className='text-white p-2 font-semibold sm:font-normal sm:p-2 rounded-md hover:bg-orange-700'>Puma</div>
+      <div className='text-white p-2 font-semibold sm:font-normal sm:p-2 rounded-md hover:bg-orange-700'>Converse</div>
           </div>
   )
 }

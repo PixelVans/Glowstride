@@ -201,7 +201,7 @@ const App = () => {
             <img src={item.img} alt={item.name} className="w-full rounded-md  h-[180px] object-cover
              transition-transform duration-300 ease-in-out hover:scale-105" />
             <p className='ml-2 mt-1 text-[13px] '>{item.name}</p>
-            <p className='ml-2  text-xs font-thin line-through text-slate-100'>Ksh <span className='font-thin'>{item.price}</span></p>
+            <p className='ml-2  text-xs  line-through text-slate-100'>Ksh <span className='font-thin'>{item.price}</span></p>
             <p className='ml-2 my-2 text-sm '>Ksh <span className=''>{(item.price)-100}</span></p>
             <div className='flex flex-row-reverse'>
               
@@ -289,7 +289,7 @@ const App = () => {
             {Object.entries(categories).map(([key, category]) => (
               <Link to={`/search?category=${category.name}`}>
                <div key={key} className=' overflow-hidden shadow-black shadow-md mb-2'>
-              <img src={category.img} alt={category.name} className='h-[170px] sm:h-[200px] w-full object-cover 
+              <img src={category.img} alt={category.name} className='h-[130px] sm:h-[200px] w-full object-cover 
               transition-transform duration-300 ease-in-out hover:scale-105
               ' />
               <p className='ml-2 mb-1 mt-1 sm:mt-2 p-1 text-xs  sm:text-[14px]'>{category.name}</p>

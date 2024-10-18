@@ -73,7 +73,7 @@ function Navbar() {
         <form className='mx-2 mt-1 p-[2px] rounded-lg flex md:hidden bg-slate-700 items-center'>
           <input
             id='search'
-            className='w-full px-4 py-[3px] bg-gray-100 text-black border border-gray-600 rounded-md focus:outline-none focus:border-orange-500'
+            className='w-full px-4 py-[3.1px] bg-gray-200 text-black border border-gray-600 rounded-md focus:outline-none focus:border-orange-500'
             type="text" 
             value={searchVal}
             onChange={(e) => setSearchVal(e.target.value)}

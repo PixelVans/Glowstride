@@ -149,19 +149,19 @@ export const shoes = {
   
 
 export const essentials = {
-    belt: {
+    belts: {
       id: 1,
       img: "https://azbelt.com/cdn/shop/products/BlackClassicSS_938x.jpg?v=1614274106"
     },
-    bra: {
+    bras: {
       id: 2,
       img: "https://cdn.laredoute.com/cdn-cgi/image/width=500,height=500,fit=pad,dpr=1/products/5/0/6/5063133fac49b6ec42365c453f1851ac.jpg"
     },
-    boxer: {
+    lingeries: {
       id: 3,
       img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFLG6KF7wD5o-v0Xw63IhPRV8okSIxpbSYZA&s"
     },
-    pantie: {
+    boxers: {
       id: 4,
       img: "https://media1.calvinklein.com/images/20230919/PLP/PLP_Boxer_Briefs_2x.jpg"
     },
@@ -169,7 +169,7 @@ export const essentials = {
       id: 5,
       img: "https://riogiftshop.com/wp-content/uploads/2023/06/Formal-Cotton-Socks-in-Kenya-7.jpg"
     },
-    cape: {
+    caps: {
       id: 6,
       img: "https://files.sophie.co.ke/2023/04/1604336905_3586-1_2073.jpg"
     },
