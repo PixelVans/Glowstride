@@ -3,7 +3,7 @@ export const settings = {
     dots: false,
     arrows: true,
     infinite: true,
-    speed: 900,
+    speed: 700,
    
     slidesToScroll: 1,
     autoplay: false,

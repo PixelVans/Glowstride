@@ -351,9 +351,9 @@ const App = () => {
         {/* label for search */}
       <div className=' flex flex-col text-center bg-slate-900 p-2 mt-5 justify-center'>
           <h1 className='text-yellow-300'>Still looking for your perfect suit?</h1>
-          <label htmlFor="search" className='bg-orange-800 mx-5 rounded-lg py-2 mt-2 mb-1 text-white font-semibold'>Search Our store
+          <label htmlFor="search" className='bg-orange-800 mx-5 rounded-lg py-2 mt-2 mb-1 md:hidden text-white font-semibold'>Search Our store
         </label>
-          <label htmlFor="searchbs" className='bg-orange-800 mx-5 hidden md:flex rounded-lg py-2 mt-2 mb-1 text-white font-semibold'>Search Our store
+          <label htmlFor="searchbs" className='bg-orange-800 mx-[80px] cursor-pointer hidden md:block  rounded-lg py-2 mt-2 mb-1 text-white font-semibold'>Search Our store
         </label>
       </div>
       
