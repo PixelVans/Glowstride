@@ -59,7 +59,7 @@ const SignInPage = () => {
           </p>
           <p className="mt-2">
             Forgot your password?{' '}
-            <Link to={"/signup"} className="text-orange-500 hover:underline">
+            <Link to={"/reset"} className="text-orange-500 hover:underline">
               Reset it
             </Link>
           </p>

@@ -11,6 +11,11 @@ function Navbar() {
   const cartItemCount = 9;
   const [searchVal, setSearchVal] = useState('');
   const [sideSlide, setSideSlide] = useState(false);
+  const navigate = useNavigate()
+  
+  const handleSearchSubmit = () => {
+    navigate(`/search?q=${searchVal}`)
+  }
 
   return (
     <div className='bg-slate-950 w-full '>
@@ -34,7 +39,7 @@ function Navbar() {
           </Link>
           
           {/* Search Form */}
-          <form className='w-[340px] mt-1 p-[2px] rounded-lg hidden md:flex bg-slate-700 items-center'>
+          <form onSubmit={handleSearchSubmit} className='w-[340px] mt-1 p-[2px] rounded-lg hidden md:flex bg-slate-700 items-center'>
             <input
               id='searchbs'
               className='w-full px-4 py-[3px] bg-gray-100 text-black border border-gray-600 rounded-md focus:outline-none focus:border-orange-500'
@@ -43,9 +48,9 @@ function Navbar() {
               value={searchVal}
               onChange={(e) => setSearchVal(e.target.value)}
             /> 
-            <Link to={`/search?q=${searchVal}`} className='px-2 text-white hover:text-orange-400'>
+            <button type='submit' className='px-2 text-white hover:text-orange-400'>
               <FaSearch/> 
-            </Link>
+            </button>
           </form>
 
           {/* Cart and User Icons */}
@@ -79,9 +84,9 @@ function Navbar() {
             onChange={(e) => setSearchVal(e.target.value)}
             placeholder='Search..' 
           /> 
-          <Link to={`/search?q=${searchVal}`} className='px-2 text-white hover:text-orange-400'>
+          <button type='submit'  className='px-2 text-white hover:text-orange-400'>
             <FaSearch/> 
-          </Link>
+          </button>
         </form>
 
         {/* Category Section with Horizontal Scroll */}
