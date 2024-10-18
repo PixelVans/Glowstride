@@ -14,10 +14,10 @@ function Navbar() {
 
   return (
     <div className='bg-slate-950 w-full '>
-      <div className='sm:mx-[30px] mx-[10px]'>
+      <div className='sm:mx-[30px] mx-[6px]'>
 
         {/* Main Nav */}
-        <div className='flex justify-between w-full p-2'>
+        <div className='flex justify-between w-full  p-1 sm:p-2'>
           
           {/* Burger Icon */}
           <div
@@ -34,9 +34,9 @@ function Navbar() {
           </Link>
           
           {/* Search Form */}
-          <form className='w-[340px] mt-1 p-[2px] rounded-lg hidden md:flex bg-slate-800 items-center'>
+          <form className='w-[340px] mt-1 p-[2px] rounded-lg hidden md:flex bg-slate-700 items-center'>
             <input
-              id='search'
+              id='searchbs'
               className='w-full px-4 py-[3px] bg-gray-100 text-black border border-gray-600 rounded-md focus:outline-none focus:border-orange-500'
               type="text" 
               placeholder='Search..' 
@@ -70,7 +70,7 @@ function Navbar() {
         </div>
 
         {/* Mobile Search Form */}
-        <form className='mx-2 mt-1 p-[2px] rounded-lg flex md:hidden bg-slate-800 items-center'>
+        <form className='mx-2 mt-1 p-[2px] rounded-lg flex md:hidden bg-slate-700 items-center'>
           <input
             id='search'
             className='w-full px-4 py-[3px] bg-gray-100 text-black border border-gray-600 rounded-md focus:outline-none focus:border-orange-500'

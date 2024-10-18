@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 const ResetPassword = () => {
     const { pathname } = useLocation();
@@ -47,15 +47,15 @@ const ResetPassword = () => {
         <div className="text-center mt-4 text-gray-400">
           <p>
             Remember your password?{' '}
-            <a href="/signin" className="text-orange-500 hover:underline">
+            <Link to={"/signin"} className="text-orange-500 hover:underline">
               Sign In
-            </a>
+            </Link>
           </p>
           <p className="mt-2">
             Don't have an account?{' '}
-            <a href="/signup" className="text-orange-500 hover:underline">
+            <Link to={"/signup"} className="text-orange-500 hover:underline">
               Sign Up
-            </a>
+            </Link>
           </p>
         </div>
       </div>

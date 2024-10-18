@@ -89,7 +89,7 @@ const App = () => {
         > <h1 className='w-[50%] sm:w-[30%] text-yellow-200 bg-black p-1 px-3 text-xs sm:text-[14px] 
         rounded-md rounded-tr-full shadow-white shadow-sm'>Reccomended for you</h1>
           <Link to={"/search?recommended"}>
-            <h1 className='text-orange-200 cursor-pointer hover:underline'>See all</h1>
+            <h1 className='text-orange-200 cursor-pointer hover:underline mr-2'>See all</h1>
           </Link>
          
         </div>
@@ -108,7 +108,7 @@ const App = () => {
         />
       </div>
       <p className='ml-2 mt-1 text-[13px] font-thin'>{item.name}</p>
-      <p className='ml-2 my-2 text-sm font-thin'>Ksh <span className='font-thin'>{item.price.toLocaleString()}</span></p>
+      <p className='ml-2 my-2 text-sm '>Ksh <span className='font-thin'>{item.price.toLocaleString()}</span></p>
       <div className='flex flex-row-reverse'>
         <button
           onClick={(e) => handleAddToCart(item, e)}
@@ -188,7 +188,7 @@ const App = () => {
         > <h1 className='w-[50%] sm:w-[30%] text-yellow-200 bg-black p-1 px-3 text-xs sm:text-[14px] 
         rounded-md rounded-tr-full shadow-white shadow-sm'>Discounted Treasures</h1>
             <Link to={"/search?discounted"}>
-            <h1 className='text-orange-200 cursor-pointer hover:underline'>See all</h1>
+            <h1 className='text-orange-200 cursor-pointer hover:underline mr-2'>See all</h1>
           </Link>
         </div>
         
@@ -202,7 +202,7 @@ const App = () => {
              transition-transform duration-300 ease-in-out hover:scale-105" />
             <p className='ml-2 mt-1 text-[13px] font-thin'>{item.name}</p>
             <p className='ml-2  text-xs font-extralight line-through text-slate-300'>Ksh <span className='font-thin'>{item.price}</span></p>
-            <p className='ml-2 my-2 text-sm font-thin'>Ksh <span className='font-thin'>{(item.price)-100}</span></p>
+            <p className='ml-2 my-2 text-sm '>Ksh <span className='font-thin'>{(item.price)-100}</span></p>
             <div className='flex flex-row-reverse'>
               
               <button
@@ -352,6 +352,8 @@ const App = () => {
       <div className=' flex flex-col text-center bg-slate-900 p-2 mt-5 justify-center'>
           <h1 className='text-yellow-300'>Still looking for your perfect suit?</h1>
           <label htmlFor="search" className='bg-orange-800 mx-5 rounded-lg py-2 mt-2 mb-1 text-white font-semibold'>Search Our store
+        </label>
+          <label htmlFor="searchbs" className='bg-orange-800 mx-5 hidden md:flex rounded-lg py-2 mt-2 mb-1 text-white font-semibold'>Search Our store
         </label>
       </div>
       

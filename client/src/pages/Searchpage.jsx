@@ -72,7 +72,7 @@ export const Searchpage = () => {
                 key={item.id} className='rounded-md p-[3px] mb-5 shadow-black shadow-md mx-auto w-1/2 sm:w-[170px]'>
                 <img src={item.img} alt={item.name} className="w-full rounded-md h-[190px] sm:h-[200px]  object-cover" />
                 <p className='ml-2 mt-1 text-[13px] font-thin text-white'>{item.name}</p>
-                <p className='ml-2 my-2 text-sm font-thin text-white'>Ksh <span className='font-thin'>{item.price.toLocaleString()}</span></p>
+                <p className='ml-2 my-2 text-sm  text-white'>Ksh <span className='font-thin'>{item.price.toLocaleString()}</span></p>
                 <div className='flex flex-row-reverse'>
                   <button
                     onClick={(e) => handleAddToCart(item, e)}
