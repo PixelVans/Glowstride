@@ -86,7 +86,7 @@ const App = () => {
         {/* recommended items */}
         <div
          className='w-full p-1 mt-4 sm:mt-[70px]  flex justify-between'
-        > <h1 className='w-[50%] sm:w-[30%] text-yellow-200 bg-black p-2 px-3 text-xs sm:text-[14px] 
+        > <h1 className='w-[50%] sm:w-[30%] text-yellow-200 bg-black p-1 sm:p-2 px-3 text-xs sm:text-[14px] 
         rounded-md rounded-tr-full shadow-slate-400 shadow-sm'>Reccomended for you</h1>
           <Link to={"/search?recommended"}>
             <h1 className='text-orange-200 cursor-pointer hover:underline mr-2'>See all</h1>
@@ -127,7 +127,7 @@ const App = () => {
 
          {/* Shoes category */}
       <div className='w-full p-1 mt-4 sm:mt-[70px] flex justify-between'>
-          <h1 className='w-[50%] sm:w-[30%] text-yellow-200 bg-black p-2 px-3 text-xs 
+          <h1 className='w-[50%] sm:w-[30%] text-yellow-200 bg-black p-1 sm:p-2  px-3 text-xs 
           sm:text-[14px] rounded-md rounded-tr-full
          shadow-slate-400 shadow-sm'>
           Footwear Collection
@@ -154,7 +154,7 @@ const App = () => {
 
             {/* all fashion wear section */}
         <div className='w-full p-1 mt-4 flex justify-between'>
-          <h1 className='w-[50%] sm:w-[30%] text-yellow-200 bg-black p-2 px-3 text-xs sm:text-[14px]
+          <h1 className='w-[50%] sm:w-[30%] text-yellow-200 bg-black p-1 sm:p-2  px-3 text-xs sm:text-[14px]
            rounded-md rounded-tr-full shadow-slate-400 shadow-sm'>
             All Fashion Wear
           </h1>
@@ -185,7 +185,7 @@ const App = () => {
       
        <div
          className='w-full p-1 mt-4 sm:mt-[70px]  flex justify-between'
-        > <h1 className='w-[50%] sm:w-[30%] text-yellow-200 bg-black p-2 px-3 text-xs sm:text-[14px] 
+        > <h1 className='w-[50%] sm:w-[30%] text-yellow-200 bg-black p-1 sm:p-2  px-3 text-xs sm:text-[14px] 
         rounded-md rounded-tr-full shadow-slate-400 shadow-sm'>Discounted Treasures</h1>
             <Link to={"/search?discounted"}>
             <h1 className='text-orange-200 cursor-pointer hover:underline mr-2'>See all</h1>
@@ -219,7 +219,7 @@ const App = () => {
                 
           <div
                   className='w-full p-1 mt-4 sm:mt-[70px]  flex justify-between'
-                  > <h1 className='w-[50%] sm:w-[30%] text-yellow-200 bg-black p-2 px-3 text-[10px] sm:text-[14px] 
+                  > <h1 className='w-[50%] sm:w-[30%] text-yellow-200 bg-black p-1 sm:p-2  px-3 text-[10px] sm:text-[14px] 
                   rounded-md rounded-tr-full shadow-slate-400 shadow-sm'>Shop Your Brand</h1>
                   </div>
                 <div className='m-1'>
@@ -245,7 +245,7 @@ const App = () => {
                 {/* new arrivals */}
                 <div
                   className='w-full p-1 mt-4 sm:mt-[70px]  flex justify-between'
-                > <h1 className='w-[50%] sm:w-[30%] text-yellow-200 bg-black p-2 
+                > <h1 className='w-[50%] sm:w-[30%] text-yellow-200 bg-black p-1 sm:p-2 
                   px-3 text-xs sm:text-[14px] rounded-md rounded-tr-full shadow-slate-400 shadow-sm'>New Arrivals</h1>
             <Link to={"/search?latest"}>
             <h1 className='text-orange-200 cursor-pointer hover:underline mr-2'>See all</h1>
@@ -279,7 +279,7 @@ const App = () => {
 
                   {/* Browse categories selection */}
             <div className='w-full p-1 mt-4 sm:mt-[70px]  '>
-          <h1 className='w-[50%] sm:w-[30%] text-yellow-200 bg-black p-2 px-3 text-xs sm:text-[14px] rounded-md
+          <h1 className='w-[50%] sm:w-[30%] text-yellow-200 bg-black p-1 sm:p-2  px-3 text-xs sm:text-[14px] rounded-md
                rounded-tr-full shadow-slate-400 shadow-sm'>
                 Browse Categories
               </h1>
@@ -306,7 +306,7 @@ const App = () => {
          {/* official wear */}
          <div
          className='w-full p-1 mt-4 sm:mt-[70px]  flex justify-between'
-        > <h1 className='w-[50%] sm:w-[30%] text-yellow-200 bg-black p-2 px-3 text-xs sm:text-[14px] 
+        > <h1 className='w-[50%] sm:w-[30%] text-yellow-200 bg-black p-1 sm:p-2  px-3 text-xs sm:text-[14px] 
         rounded-md rounded-tr-full shadow-slate-400 shadow-sm'>Official wear</h1>
         </div>
            <div className='w-full bg-slate-700 mt-2 flex flex-col gap-2 p-1 '>
@@ -330,7 +330,7 @@ const App = () => {
 
           {/* Utilities */}
       <div className='w-full p-1 mt-4 sm:mt-[70px] flex justify-between'>
-          <h1 className='w-[50%] sm:w-[30%] text-yellow-200 bg-black p-2 px-3 text-xs sm:text-[14px] rounded-md rounded-tr-full
+          <h1 className='w-[50%] sm:w-[30%] text-yellow-200 bg-black p-1 sm:p-2  px-3 text-xs sm:text-[14px] rounded-md rounded-tr-full
          shadow-slate-400 shadow-sm'>
           Intimates and Essentials
         </h1>

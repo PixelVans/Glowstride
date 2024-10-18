@@ -30,7 +30,7 @@ function Navbar() {
 
           {/* Brand Logo */}
           <Link to={"/"}>
-            <h1 className='text-yellow-200 font-semibold text-xl'>Glowstride</h1> 
+            <h1 className='text-yellow-200 font-semibold text-xl '>Glowstride</h1> 
           </Link>
           
           {/* Search Form */}
