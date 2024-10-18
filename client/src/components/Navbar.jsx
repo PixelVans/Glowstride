@@ -13,10 +13,12 @@ function Navbar() {
   const [sideSlide, setSideSlide] = useState(false);
   const navigate = useNavigate()
   
-  const handleSearchSubmit = () => {
+  const handleSearchSubmit = (e) => {
+    e.preventDefault();
     navigate(`/search?q=${searchVal}`)
+    
+   console.log(searchVal)
   }
-
   return (
     <div className='bg-slate-950 w-full '>
       <div className='sm:mx-[30px] mx-[6px]'>
@@ -43,7 +45,7 @@ function Navbar() {
             <input
               id='searchbs'
               className='w-full px-4 py-[3px] bg-gray-100 text-black border border-gray-600 rounded-md focus:outline-none focus:border-orange-500'
-              type="text" 
+              type="search" 
               placeholder='Search..' 
               value={searchVal}
               onChange={(e) => setSearchVal(e.target.value)}
@@ -79,7 +81,7 @@ function Navbar() {
           <input
             id='search'
             className='w-full px-4 py-[3.1px] bg-gray-200 text-black border border-gray-600 rounded-md focus:outline-none focus:border-orange-500'
-            type="text" 
+            type="search" 
             value={searchVal}
             onChange={(e) => setSearchVal(e.target.value)}
             placeholder='Search..' 
