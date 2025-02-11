@@ -93,8 +93,11 @@ const App = () => {
           </Link>
          
         </div>
-        <Slider {...settings} className=' ring-yellow-200  ring-[0.4px] p-3 mt-2  rounded-md'>
-        {recommended.map((item) => (
+        
+        
+        <Slider {...settings} className=' ring-yellow-200  ring-[0.4px]  mt-2  rounded-md'>
+          {recommended.map((item) => (
+          
     <div
       onClick={() => handleDivClick(item.id)}
       key={item.id}
@@ -112,12 +115,13 @@ const App = () => {
       <div className='flex flex-row-reverse'>
         <button
           onClick={(e) => handleAddToCart(item, e)}
-          className='text-orange-400 text-4xl mr-4 mb-1 rounded-full w-5 hover:text-yellow-400'
+          className='text-orange-400 text-4xl mr-4 mb-1 rounded-full w-5 hover:text-green-400'
         >
           +
         </button>
       </div>
-    </div>
+              </div>
+             
     ))}
         </Slider>
 
@@ -201,13 +205,13 @@ const App = () => {
             <img src={item.img} alt={item.name} className="w-full rounded-md  h-[180px] object-cover
              transition-transform duration-300 ease-in-out hover:scale-105" />
             <p className='ml-2 mt-1 text-[13px] '>{item.name}</p>
-            <p className='ml-2  text-xs  line-through text-slate-100'>Ksh <span className=''>{item.price}</span></p>
-            <p className='ml-2 my-2 text-sm '>Ksh <span className=''>{(item.price)-100}</span></p>
+            <p className='ml-2  text-sm  line-through text-slate-300'>Ksh <span className=''>{item.price}</span></p>
+            <p className='ml-2 my-2 text-md '>Ksh <span className=''>{(item.price)-100}</span></p>
             <div className='flex flex-row-reverse'>
               
               <button
                   onClick={(e) => handleAddToCart(item, e)}
-                className='text-orange-400 text-3xl mr-3 mb-1 rounded-full w-5'>+</button>
+                className='text-orange-400 text-4xl mr-3 mb-1 rounded-full w-5 hover:text-green-400'>+</button>
             </div>
           </div>
         ))}
@@ -268,7 +272,7 @@ const App = () => {
               
                 <button
                    onClick={(e) => handleAddToCart(item, e)}
-                  className='text-orange-400 text-3xl mr-3 mb-1 rounded-full w-5'>+</button>
+                  className='text-orange-400 text-4xl mr-3 mb-1 rounded-full w-5 hover:text-green-400'>+</button>
                      </div>
                     </div>
                     
